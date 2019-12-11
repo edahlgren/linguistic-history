@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Basic d3 prototype</title>
+    <!-- Load our CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="about">
+        <h1>Check preprocessing and d3.js loading</h1>
+        
+        <p>
+          This demo transforms the volume1-poster data into a JSON graph, loads it into the browser using d3.js, and visualizes it using a vertical arc diagram as a verification step.
+        </p>
+        
+        <p>
+          While interesting, the vertical arc diagram visualization isn't necessarily important. It was used here as a test, to get familiar with the structure of the data, to show how d3.js can be used to load and visualize the data, and to check whether people or links are missing.
+        </p>
+      </div>
+    </div>
+    
+    <div class="container">
+
+      <div class="svg-container" id="svg-container">
+        <!-- SVG will be inserted here -->
+      </div>
+      
+      <div class="legend">
+        <div class="legend-item">
+          <span class="bullet" style="color: #b2c2bd;">&bull;</span>
+          Teacher
+        </div>
+        <br/>
+        <div class="legend-item">
+          <span class="bullet" style="color: #65dbb7;">&bull;</span>
+          Post Doc
+        </div>
+        <br/>
+        <div class="legend-item">
+          <span class="bullet" style="color: #6d93c7;">&bull;</span>
+          Influenced
+        </div>
+        <br/>
+        <div class="legend-item">
+          <span class="bullet" style="color: #ff0000;">&bull;</span>
+          Hostile
+        </div>
+      </div>
+      
+    </div>
+    
+    <footer></footer>
+  </body>
+
+  <!-- Load d3 v5 -->
+  <script src="//d3js.org/d3.v5.min.js" charset="utf-8"></script>
+  <!-- Load our javascript -->
+  <script type="text/javascript" src="/js/main.js"></script>
+</html>

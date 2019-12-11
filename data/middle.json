@@ -1,0 +1,280 @@
+{
+    "people": [
+        // Prague linguistic circle
+        {
+            "first": "Roman",
+            "last": "Jakobson",
+            "born": "1986",
+            "profession": "linguist",
+            "group": "Prague Linguistic Circle",
+            "scaleX": 4
+        },
+        {
+            "first": "Gustav",
+            "last": "Shpet",
+            "born": "1879",
+            "profession": "linguist",
+            "group": "Prague Linguistic Circle",
+            "scaleX": 1
+        },
+        {
+            "first": "Nikolai",
+            "last": "Trubetzkoy",
+            "born": "1890",
+            "profession": "linguist",
+            "group": "Prague Linguistic Circle",
+            "scaleX": 2
+        },
+        {
+            "first": "Vilem",
+            "last": "Mathesius",
+            "born": "1882",
+            "profession": "linguist",
+            "group": "Prague Linguistic Circle",
+            "scaleX": 9
+        },
+        // Brentano's circle
+        {
+            "first": "Anton",
+            "last": "Marty",
+            "born": "1847",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 1
+        },
+        {
+            "first": "Tomas",
+            "last": "Masaryk",
+            "born": "1850",
+            "profession": "linguist",
+            "group": "Brentano's Circle",
+            "scaleX": 3
+        },
+        {
+            "first": "Edmund",
+            "last": "Husserl",
+            "born": "1859",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 5
+        },
+        {
+            "first": "Christian von",
+            "last": "Ehrenfels",
+            "born": "1859",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 7
+        },
+        {
+            "first": "Sigmund",
+            "last": "Freud",
+            "born": "1856",
+            "profession": "psychologist",
+            "group": "Brentano's Circle",
+            "scaleX": 8
+        },
+        {
+            "first": "Carl",
+            "last": "Stumpf",
+            "born": "1848",
+            "profession": "psychologist",
+            "group": "Brentano's Circle",
+            "scaleX": 8
+        },
+        {
+            "first": "Franz",
+            "last": "Brentano",
+            "born": "1838",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 4
+        },
+        {
+            "first": "Kasimir",
+            "last": "Twardowski",
+            "born": "1866",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 10
+        },
+        {
+            "first": "Alexis",
+            "last": "Meinong",
+            "born": "1853",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 10
+        },
+        // Before Brentaro
+        {
+            "first": "Auguste ",
+            "last": "Comte",
+            "born": "1798",
+            "profession": "philosopher",
+            "group": "Before Brentano",
+            "scaleX": 2
+        },
+        {
+            "first": "Friedrich",
+            "last": "Trendelenberg",
+            "born": "1802",
+            "profession": "philosopher",
+            "group": "Before Brentano",
+            "scaleX": 5
+        },
+        {
+            "first": "Hermann",
+            "last": "Lotze",
+            "born": "1817",
+            "profession": "psychologist",
+            "group": "Before Brentano",
+            "scaleX": 7
+        },
+        {
+            "first": "John Stuart",
+            "last": "Mill ",
+            "born": "1806",
+            "profession": "philosopher",
+            "group": "Before Brentano",
+            "scaleX": 8
+        },
+        {
+            "first": "Gustav",
+            "last": "Fechner",
+            "born": "1801",
+            "profession": "psychologist",
+            "group": "Before Brentano",
+            "scaleX": 10
+        },
+        // Gestalt circle
+        {
+            "first": "Ernst",
+            "last": "Cassirer",
+            "born": "1874",
+            "profession": "philosopher",
+            "group": "Gestalt",
+            "scaleX": 1
+        },
+        {
+            "first": "Kurt",
+            "last": "Koffka",
+            "born": "1886",
+            "profession": "psychologist",
+            "group": "Gestalt",
+            "scaleX": 3
+        },
+        {
+            "first": "Kurt",
+            "last": "Lewin",
+            "born": "1890",
+            "profession": "psychologist",
+            "group": "Gestalt",
+            "scaleX": 5
+        },
+        {
+            "first": "Herbert S.",
+            "last": "Langfeld",
+            "born": "1879",
+            "died": "1958",
+            "profession": "psychologist",
+            "group": "Gestalt",
+            "scaleX": 4
+        },
+        {
+            "first": "Max",
+            "last": "Wertheimer",
+            "born": "1880",
+            "profession": "psychologist",
+            "group": "Gestalt",
+            "scaleX": 6
+        },
+    ],
+    "links": [
+        {
+            "from": "Shpet",
+            "to": "Jakobson",
+            "type": "teacher"
+        },
+        {
+            "from": "Masaryk",
+            "to": "Mathesius",
+            "type": "teacher"
+        },
+        {
+            "from": "Marty",
+            "to": "Mathesius",
+            "type": "teacher"
+        },
+        {
+            "from": "Comte",
+            "to": "Brentano",
+            "type": "influence"
+        },
+        {
+            "from": "Brentano",
+            "to": "Marty",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Masaryk",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Husserl",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Meinong",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Ehrenfels",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Stumpf",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Freud",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Twardowski",
+            "type": "teacher"
+        },
+        {
+            "from": "Trendelenberg",
+            "to": "Brentano",
+            "type": "teacher"
+        },
+        {
+            "from": "Mill",
+            "to": "Brentano",
+            "type": "teacher"
+        },
+        {
+            "from": "Stumpf",
+            "to": "Langfeld",
+            "type": "teacher"
+        },
+        {
+            "from": "Stumpf",
+            "to": "Wertheimer",
+            "type": "teacher"
+        },
+        {
+            "from": "Cassirer",
+            "to": "Lewin",
+            "type": "teacher"
+        }
+    ]
+}

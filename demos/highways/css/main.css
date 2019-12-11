@@ -1,0 +1,51 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.about {
+    margin-top: 6rem;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about h1 {
+    font-family: "sans-serif";
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.svg-container {
+    margin-top: 3rem;
+    margin-bottom: 12rem;
+    float: left;
+}
+
+svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-y text {
+    color: #aaa;
+}
+
+.grid-y line {
+    stroke: lightgrey;
+    stroke-opacity: 0.2;
+    shape-rendering: crispEdges;
+}
+
+.grid-x line {
+    stroke: lightgrey;
+    stroke-opacity: 0.2;
+    shape-rendering: crispEdges;
+}
+
+.thought-group {
+    fill: #f5f9fa;
+}

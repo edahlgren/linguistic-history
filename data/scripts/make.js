@@ -54,13 +54,16 @@ function main() {
         process.exit(1);
     }
 
-    // Get the data
+    // Parse the people
+    const people = get_people(args.people);
+
+    // Get links that include these people
+    const links = get_links(people);
+    
+    // JSON to write
     let data = {
-        // Read people from CSV file
-        people: get_people(args.people),
-        
-        // Get links from memory
-        links: get_links()
+        people: people,
+        links: links
     };
     
     // Write the JSON data to a file
@@ -132,7 +135,7 @@ function get_people(file) {
 
 // Links between people, generated from the hard-coded links in
 // original/volume1-poster.py
-function get_links() {
+function get_links(people) {
     const links = [
         { from: "Sorokin", to: "Merton", type: "teacher" },
         { from: "Parsons", to: "Merton", type: "teacher" },
@@ -259,5 +262,18 @@ function get_links() {
         { from: "Simmel", to: "Park", type: "teacher" },
         { from: "Trendelenberg", to: "Brentano", type: "teacher" }
     ];
-    return links;
+
+    // Choose an index based on the key or last name
+    const set = new Set(people.map(function(person) { 
+        return (person.key.length > 0 ? person.key : person.last);
+    }));
+
+    // Only use links that include these people
+    return links.filter(function(link) {
+        if (!set.has(link.from))
+            return false;
+        if (!set.has(link.to))
+            return false;
+        return true;
+    });
 }
