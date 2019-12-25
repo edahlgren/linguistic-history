@@ -2,7 +2,8 @@
 const width = 1080,
       half_width = width / 2,
       box_height = 14,
-      margin_y = 20;
+      margin_y = 20,
+      default_stroke = "#f5bcb3";
 
 const svg_parent = document.getElementById('main-container');
 
@@ -78,7 +79,7 @@ d3.json("data/middle.json").then(function(genealogy) {
     var svg = d3.select("#svg-container").append("svg")
             .attr("width", width)
             .attr("height", height);
-    
+
     // Add the groups (lowest layer)
     svg.selectAll("groups")
         .data(graph.showGroups)
@@ -164,7 +165,7 @@ d3.json("data/middle.json").then(function(genealogy) {
               .call(function(g) {
                   g.select(".domain").remove();
               });
-    
+
     // Position the people
     const people = svg.append("g")
               .attr("font-family", "sans-serif")
@@ -321,120 +322,120 @@ d3.json("data/middle.json").then(function(genealogy) {
     
     
     // Connect Mathesius
-    connect_vertical(svg, "Mathesius-Marty", {
+    connect_vertical(svg, "Mathesius-Marty", null, {
         start: mathesius_bottom[0],
         end: marty_left[0]
     });    
-    connect_vertical(svg, "Mathesius-Masaryk", {
+    connect_vertical(svg, "Mathesius-Masaryk", null, {
         start: mathesius_bottom[1],
         end: masaryk_left[0]
     });
 
     // Connect Brentano
-    connect_vertical(svg, "Brentano-Marty", {
+    connect_vertical(svg, "Brentano-Marty", null, {
         start: brentano_top[0],
         end: marty_right[0]
     });    
-    connect_vertical(svg, "Brentano-Masaryk", {
+    connect_vertical(svg, "Brentano-Masaryk", null, {
         start: brentano_top[1],
         end: masaryk_right[0]
     });
-    connect_vertical(svg, "Brentano-Husserl", {
+    connect_vertical(svg, "Brentano-Husserl", null, {
         start: brentano_top[2],
         end: husserl_right[0]
     });
-    connect_vertical(svg, "Brentano-Twardowski", {
+    connect_vertical(svg, "Brentano-Twardowski", null, {
         start: brentano_top[3],
         end: twardowski_left[0]
     });
-    connect_vertical(svg, "Brentano-Ehrenfels", {
+    connect_vertical(svg, "Brentano-Ehrenfels", null, {
         start: brentano_top[4],
         end: ehrenfels_left[0]
     });
-    connect_vertical(svg, "Brentano-Freud", {
+    connect_vertical(svg, "Brentano-Freud", null, {
         start: brentano_top[5],
         end: freud_left[0]
     });
-    connect_vertical(svg, "Brentano-Meinong", {
+    connect_vertical(svg, "Brentano-Meinong", null, {
         start: brentano_top[6],
         end: meinong_left[0]
     });
-    connect_vertical(svg, "Brentano-Stumpf", {
+    connect_vertical(svg, "Brentano-Stumpf", null, {
         start: brentano_top[7],
         end: stumpf_left[0]
     });
-
-    connect_vertical(svg, "Brentano-Comte", {
+    
+    connect_vertical(svg, "Brentano-Comte", null, {
         start: brentano_bottom[0],
         end: comte_right[0]
     });
-    connect_vertical(svg, "Brentano-Trendelenberg", {
+    connect_vertical(svg, "Brentano-Trendelenberg", null, {
         start: brentano_bottom[1],
         end: trendelenberg_left[0]
     });
-    connect_vertical(svg, "Brentano-Mill", {
+    connect_vertical(svg, "Brentano-Mill", null, {
         start: brentano_bottom[2],
         end: mill_left[0]
     });
     
     // Connect Gestalt
-    connect_vertical(svg, "Langfeld-Stumpf", {
+    connect_vertical(svg, "Langfeld-Stumpf", null, {
         start: langfeld_left[0],
         end: stumpf_right[0]
     });
-    connect_vertical(svg, "Wertheimer-Stumpf", {
+    connect_vertical(svg, "Wertheimer-Stumpf", null, {
         start: wertheimer_left[0],
         end: stumpf_right[1]
     });
-    connect_vertical(svg, "Heider-Wertheimer", {
+    connect_vertical(svg, "Heider-Wertheimer", null, {
         start: heider_bottom[0],
         end: wertheimer_right[0]
     });
 
     // Connect Cassirer
-    connect_vertical(svg, "Cassirer-Lewin", {
+    connect_vertical(svg, "Cassirer-Lewin", null, {
         start: cassirer_top[0],
         end: lewin_left[0]
     });
 
     // Connect Jakobson
-    connect_vertical(svg, "Jakobson-Shpet", {
+    connect_vertical(svg, "Jakobson-Shpet", null, {
         start: jakobson_bottom[0],
         end: shpet_right[0]
     });
 
     // Connect Russell
-    connect_vertical(svg, "Russell-Wittgenstein", {
+    connect_vertical(svg, "Russell-Wittgenstein", null, {
         start: russell_top[0],
         end: wittgenstein_right[0]
     });
-    connect_vertical(svg, "Hilbert-Husserl", {
+    connect_vertical(svg, "Hilbert-Husserl", null, {
         start: hilbert_bottom[0],
         end: husserl_left[0]
     });
     
     // Connect Chelpanov
-    connect_vertical(svg, "Chelpanov-Shpet", {
+    connect_vertical(svg, "Chelpanov-Shpet", null, {
         start: chelpanov_top[0],
         end: shpet_left[0]
     });
 
     // Connect Wundt
-    connect_vertical(svg, "Wundt-Titchener", {
+    connect_vertical(svg, "Wundt-Titchener", null, {
         start: wundt_top[3],
         end: titchener_bottom[0]
     });
     
     // Custom connections
     const brentano_corners = get_corners(brentano);
-
+    
     const marty_to_trendelenberg = [
         marty_right[1],
         { x: brentano_top[0].x - 8, y: marty_right[1].y },
         { x: brentano_top[0].x - 8, y: trendelenberg_left[1].y },
         trendelenberg_left[1]
     ];
-    connect_through(svg, "Marty-Trendelenberg", null, marty_to_trendelenberg);
+    connect_through(svg, "Marty-Trendelenberg", null, null, marty_to_trendelenberg);
     
     const chelpanov_to_wundt = [
         chelpanov_bottom[0],
@@ -442,7 +443,8 @@ d3.json("data/middle.json").then(function(genealogy) {
         { x: wundt_top[1].x, y: brentano_corners.bottom_left.y + 8 },
         wundt_top[1],
     ];
-    connect_through(svg, "Chelpanov-Wundt", "Brentano's Circle", chelpanov_to_wundt);
+    connect_through(svg, "Chelpanov-Wundt", "Brentano's Circle",
+                    null, chelpanov_to_wundt);
 
     const wundt_to_angell = [
         wundt_top[2],
@@ -450,14 +452,14 @@ d3.json("data/middle.json").then(function(genealogy) {
         { x: angell_bottom[0].x, y: titchener_bottom[0].y + 8 },
         angell_bottom[0],
     ];
-    connect_through(svg, "Wundt-Angell", null, wundt_to_angell);
+    connect_through(svg, "Wundt-Angell", null, null, wundt_to_angell);
     
-    connect_vertical2(svg, "Wundt-unknown", "Brentano's Circle", {
+    connect_vertical2(svg, "Wundt-unknown", "Brentano's Circle", null, {
         start: wundt_top[0],
         end: { x: 0, y: brentano_corners.bottom_left.y + 16 }
     });
 
-    connect_vertical2(svg, "Koffka-unknown", "Moscow School", {
+    connect_vertical2(svg, "Koffka-unknown", "Moscow School", null, {
         start: koffka_left[0],
         end: { x: 0, y: koffka_left[0].y }
     });
@@ -612,7 +614,7 @@ const titchener_links = {
     bottom: [ "Wundt" ]
 };
 
-const conn_width = 8,
+const conn_width = 4,
       conn_padding_between = 1,
       conn_padding_away = 8,
       conn_with_padding = conn_width + conn_padding_between;
@@ -755,7 +757,7 @@ function connect_through_points(points) {
     return all;
 }
 
-function connect_vertical2(svg, name, before, endpoints) {
+function connect_vertical2(svg, name, before, stroke, endpoints) {
     let points = connect_vertical_points(endpoints);
 
     // Make the line
@@ -763,9 +765,8 @@ function connect_vertical2(svg, name, before, endpoints) {
             .attr("d", svg_line(points))
             .attr("id", name)
             .attr("class", "line")
-            .style("stroke", "#ff8875")
+            .style("stroke", (stroke ? stroke : default_stroke))
             .style("stroke-width", points[0].r)
-            .style("stroke-opacity", 0.25)
             .style("fill", "none");
     
     if (before) {
@@ -775,7 +776,7 @@ function connect_vertical2(svg, name, before, endpoints) {
     }
 }
 
-function connect_through(svg, name, before, points) {
+function connect_through(svg, name, before, stroke, points) {
     points = connect_through_points(points);
     console.log(points);
 
@@ -784,9 +785,8 @@ function connect_through(svg, name, before, points) {
             .attr("d", svg_line(points))
             .attr("id", name)
             .attr("class", "line")
-            .style("stroke", "#ff8875")
+            .style("stroke", (stroke ? stroke : default_stroke))
             .style("stroke-width", points[0].r)
-            .style("stroke-opacity", 0.25)
             .style("fill", "none");
     
     if (before) {
@@ -845,7 +845,7 @@ function connect_vertical_points(endpoints) {
     return points;
 }
 
-function connect_vertical(svg, name, endpoints) {
+function connect_vertical(svg, name, stroke, endpoints) {
     let points = connect_vertical_points(endpoints);
 
     // Make the line
@@ -853,9 +853,8 @@ function connect_vertical(svg, name, endpoints) {
         .attr("d", svg_line(points))
         .attr("id", name)
         .attr("class", "line")
-        .style("stroke", "#ff8875")
+        .style("stroke", (stroke ? stroke : default_stroke))
         .style("stroke-width", endpoints.start.r)
-        .style("stroke-opacity", 0.25)
         .style("fill", "none");
 }
 
@@ -865,7 +864,7 @@ function show_points(svg, points, color) {
         .enter()
         .append("circle")
         .attr("class", "point")
-        .attr("r", function(d) { return d.r * 0.6; })
+        .attr("r", function(d) { return d.r; })
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; })
         .attr("stroke", "none")

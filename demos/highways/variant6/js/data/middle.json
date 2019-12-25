@@ -1,0 +1,527 @@
+{
+    "groups": [
+        {
+            "group": "Moscow School",
+            "start": 0,
+            "end": 0.75
+        },
+        {
+            "group": "Mathematicians",
+            "start": 1,
+            "end": 2.15
+        },
+        {
+            "group": "Prague Linguistic Circle",
+            "start": 1,
+            "end": 2
+        },
+        {
+            "group": "Wittgenstein's Circle",
+            "start": 2.25,
+            "end": 3.25
+        },
+        {
+            "group": "Russell's Circle",
+            "start": 3,
+            "end": 3.25
+        },
+        {
+            "group": "Vienna Circle",
+            "start": 3.5,
+            "end": 6.5
+        },
+        {
+            "group": "Brentano's Circle",
+            "start": 2.5,
+            "end": 7
+        },
+        {
+            "group": "Before Brentano",
+            "start": 2,
+            "end": 8
+        },
+        {
+            "group": "Cassirer's Circle",
+            "start": 6.5,
+            "end": 7
+        },
+        {
+            "group": "Gestalt",
+            "start": 7.25,
+            "end": 10
+        },
+        {
+            "group": "Wundt's Circle",
+            "start": 9,
+            "end": 10
+        },
+        {
+            "group": "Peirce's Circle",
+            "start": 6.5,
+            "end": 7.25
+        }
+    ],
+    "showGroups": [
+        {
+            "group": "Moscow School",
+            "start": 0,
+            "end": 0.75,
+            "flushTop": true
+        },
+        {
+            "group": "Prague Linguistic Circle",
+            "start": 1,
+            "end": 2,
+            "flushTop": true
+        },
+        {
+            "group": "Wittgenstein's Circle",
+            "start": 2.3,
+            "end": 3,
+            "flushTop": true
+        },
+        {
+            "group": "Vienna Circle",
+            "start": 3.5,
+            "end": 6.5,
+            "flushTop": true
+        },
+        {
+            "group": "Brentano's Circle",
+            "start": 2.5,
+            "end": 6.5
+        },
+        {
+            "group": "Gestalt",
+            "start": 7.25,
+            "end": 10,
+            "flushTop": true
+        }
+    ],
+    "people": [
+        {
+            "first": "Georgi",
+            "last": "Chelpanov",
+            "born": "1862",
+            "profession": "uncertain",
+            "group": "Moscow School",
+            "scaleX": 9
+        },
+        {
+            "first": "David",
+            "last": "Hilbert",
+            "born": "1862",
+            "profession": "mathematician",
+            "group": "Mathematicians",
+            "scaleX": 10
+        },
+        {
+            "first": "Lev",
+            "last": "Scherba",
+            "born": "1850",
+            "profession": "mathematician",
+            "group": "Mathematicians",
+            "scaleX": 4
+        },
+        {
+            "first": "Georg",
+            "last": "Cantor",
+            "born": "1845",
+            "profession": "mathematician",
+            "group": "Mathematicians",
+            "scaleX": 2
+        },
+        {
+            "first": "Roman",
+            "last": "Jakobson",
+            "born": "1896",
+            "profession": "linguist",
+            "group": "Prague Linguistic Circle",
+            "scaleX": 4
+        },
+        {
+            "first": "Gustav",
+            "last": "Shpet",
+            "born": "1879",
+            "profession": "linguist",
+            "group": "Prague Linguistic Circle",
+            "scaleX": 1
+        },
+        {
+            "first": "Nikolai",
+            "last": "Trubetzkoy",
+            "born": "1890",
+            "profession": "linguist",
+            "group": "Prague Linguistic Circle",
+            "scaleX": 1.5
+        },
+        {
+            "first": "Vilem",
+            "last": "Mathesius",
+            "born": "1882",
+            "profession": "linguist",
+            "group": "Prague Linguistic Circle",
+            "scaleX": 8
+        },
+        {
+            "first": "Ludwig",
+            "last": "Wittgenstein",
+            "born": "1889",
+            "profession": "philosopher",
+            "group": "Wittgenstein's Circle",
+            "scaleX": 4
+        },
+        {
+            "first": "Jan ",
+            "last": "Lukasiewicz",
+            "born": "1878",
+            "profession": "logician",
+            "group": "Wittgenstein's Circle",
+            "scaleX": 4
+        },
+        {
+            "first": "Bertrand",
+            "last": "Russell",
+            "born": "1872",
+            "profession": "philosopher",
+            "group": "Russell's Circle",
+            "scaleX": 5
+        },
+        {
+            "first": "Rudolf",
+            "last": "Carnap",
+            "born": "1891",
+            "profession": "philosopher",
+            "group": "Vienna Circle",
+            "scaleX": 4
+        },
+        {
+            "first": "Alelxander",
+            "last": "Koyre",
+            "born": "1892",
+            "profession": "philosopher",
+            "group": "Vienna Circle",
+            "scaleX": 0
+        },
+        {
+            "first": "Moritz",
+            "last": "Schlick",
+            "born": "1882",
+            "profession": "philosopher",
+            "group": "Vienna Circle",
+            "scaleX": 4
+        },
+        {
+            "first": "Hans",
+            "last": "Reichenbach",
+            "born": "1891",
+            "profession": "philosopher",
+            "group": "Vienna Circle",
+            "scaleX": 8
+        },
+        {
+            "first": "Otto",
+            "last": "Neurath",
+            "born": "1882",
+            "profession": "philosopher",
+            "group": "Vienna Circle",
+            "scaleX": 8
+        },
+        {
+            "first": "Anton",
+            "last": "Marty",
+            "born": "1847",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 1
+        },
+        {
+            "first": "Tomas",
+            "last": "Masaryk",
+            "born": "1850",
+            "profession": "linguist",
+            "group": "Brentano's Circle",
+            "scaleX": 2.5
+        },
+        {
+            "first": "Edmund",
+            "last": "Husserl",
+            "born": "1859",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 3
+        },
+        {
+            "first": "Christian von",
+            "last": "Ehrenfels",
+            "born": "1859",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 5.5
+        },
+        {
+            "first": "Sigmund",
+            "last": "Freud",
+            "born": "1856",
+            "profession": "psychologist",
+            "group": "Brentano's Circle",
+            "scaleX": 7.5
+        },
+        {
+            "first": "Carl",
+            "last": "Stumpf",
+            "born": "1848",
+            "profession": "psychologist",
+            "group": "Brentano's Circle",
+            "scaleX": 8
+        },
+        {
+            "first": "Franz",
+            "last": "Brentano",
+            "born": "1838",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 4
+        },
+        {
+            "first": "Kasimir",
+            "last": "Twardowski",
+            "born": "1866",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 10
+        },
+        {
+            "first": "Alexis",
+            "last": "Meinong",
+            "born": "1853",
+            "profession": "philosopher",
+            "group": "Brentano's Circle",
+            "scaleX": 10
+        },
+        {
+            "first": "Auguste ",
+            "last": "Comte",
+            "born": "1798",
+            "profession": "philosopher",
+            "group": "Before Brentano",
+            "scaleX": 2
+        },
+        {
+            "first": "Friedrich",
+            "last": "Trendelenberg",
+            "born": "1802",
+            "profession": "philosopher",
+            "group": "Before Brentano",
+            "scaleX": 5
+        },
+        {
+            "first": "Hermann",
+            "last": "Lotze",
+            "born": "1817",
+            "profession": "psychologist",
+            "group": "Before Brentano",
+            "scaleX": 7
+        },
+        {
+            "first": "John Stuart",
+            "last": "Mill",
+            "born": "1806",
+            "profession": "philosopher",
+            "group": "Before Brentano",
+            "scaleX": 8
+        },
+        {
+            "first": "Gustav",
+            "last": "Fechner",
+            "born": "1801",
+            "profession": "psychologist",
+            "group": "Before Brentano",
+            "scaleX": 10
+        },
+        {
+            "first": "Ernst",
+            "last": "Cassirer",
+            "born": "1874",
+            "profession": "philosopher",
+            "group": "Cassirer's Circle",
+            "scaleX": 5
+        },
+        {
+            "first": "Kurt",
+            "last": "Koffka",
+            "born": "1886",
+            "profession": "psychologist",
+            "group": "Gestalt",
+            "scaleX": 0
+        },
+        {
+            "first": "Kurt",
+            "last": "Lewin",
+            "born": "1890",
+            "profession": "psychologist",
+            "group": "Gestalt",
+            "scaleX": 3
+        },
+        {
+            "first": "Herbert S.",
+            "last": "Langfeld",
+            "born": "1879",
+            "died": "1958",
+            "profession": "psychologist",
+            "group": "Gestalt",
+            "scaleX": 2.5
+        },
+        {
+            "first": "Max",
+            "last": "Wertheimer",
+            "born": "1880",
+            "profession": "psychologist",
+            "group": "Gestalt",
+            "scaleX": 5.5
+        },
+        {
+            "first": "Fritz",
+            "last": "Heider",
+            "born": "1896",
+            "profession": "psychologist",
+            "group": "Gestalt",
+            "scaleX": 8
+        },
+        {
+            "first": "Wilhelm  ",
+            "last": "Wundt",
+            "born": "1832",
+            "profession": "psychologist",
+            "group": "Wundt's Circle",
+            "scaleX": 8.5
+        },
+        {
+            "first": "James ",
+            "last": "Angell",
+            "born": "1869",
+            "profession": "psychologist",
+            "group": "Wundt's Circle",
+            "scaleX": 2
+        },
+        {
+            "first": "Edward",
+            "last": "Titchener",
+            "born": "1867",
+            "profession": "psychologist",
+            "group": "Wundt's Circle",
+            "scaleX": 7
+        },
+        {
+            "first": "Wililam",
+            "last": "James",
+            "born": "1842",
+            "profession": "psychologist",
+            "group": "Wundt's Circle",
+            "scaleX": 1
+        },
+        {
+            "first": "Charles Sanders ",
+            "last": "Peirce",
+            "born": "1839",
+            "profession": "philosopher",
+            "group": "Peirce's Circle",
+            "scaleX": 10
+        },
+        {
+            "first": "Theodule",
+            "last": "Ribot",
+            "born": "1839",
+            "profession": "psychologist",
+            "group": "Peirce's Circle",
+            "scaleX": 4
+        }
+    ],
+    "links": [
+        {
+            "from": "Shpet",
+            "to": "Jakobson",
+            "type": "teacher"
+        },
+        {
+            "from": "Masaryk",
+            "to": "Mathesius",
+            "type": "teacher"
+        },
+        {
+            "from": "Marty",
+            "to": "Mathesius",
+            "type": "teacher"
+        },
+        {
+            "from": "Comte",
+            "to": "Brentano",
+            "type": "influence"
+        },
+        {
+            "from": "Brentano",
+            "to": "Marty",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Masaryk",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Husserl",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Meinong",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Ehrenfels",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Stumpf",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Freud",
+            "type": "teacher"
+        },
+        {
+            "from": "Brentano",
+            "to": "Twardowski",
+            "type": "teacher"
+        },
+        {
+            "from": "Trendelenberg",
+            "to": "Brentano",
+            "type": "teacher"
+        },
+        {
+            "from": "Mill",
+            "to": "Brentano",
+            "type": "teacher"
+        },
+        {
+            "from": "Stumpf",
+            "to": "Langfeld",
+            "type": "teacher"
+        },
+        {
+            "from": "Stumpf",
+            "to": "Wertheimer",
+            "type": "teacher"
+        },
+        {
+            "from": "Cassirer",
+            "to": "Lewin",
+            "type": "teacher"
+        }
+    ]
+}

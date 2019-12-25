@@ -28,6 +28,7 @@ svg {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+    background-color: #f0efed;
 }
 
 .grid-y text {
@@ -44,8 +45,4 @@ svg {
     stroke: lightgrey;
     stroke-opacity: 0.2;
     shape-rendering: crispEdges;
-}
-
-.thought-group {
-    fill: #f5f9fa;
 }

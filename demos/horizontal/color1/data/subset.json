@@ -1,0 +1,723 @@
+{
+  "people": [
+      {
+          "first": "Immanuel",
+          "last": "Kant",
+          "born": "1724",
+          "died": "1804",
+          "scaleY": 2,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Johann Gottleib",
+          "last": "Fichte",
+          "born": "1762",
+          "died": "1814",
+          "scaleY": 2,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Johann Gottfried",
+          "last": "Herder",
+          "born": "1744",
+          "died": "1803",
+          "scaleY": 10,
+          "profession": "linguist"
+      },
+      {
+          "first": "Wilhelm von",
+          "last": "Humboldt",
+          "born": "1767",
+          "died": "1835",
+          "scaleY": 5,
+          "profession": "linguist"
+      },
+      {
+          "first": "Friedrich von",
+          "last": "Schlegel",
+          "born": "1772",
+          "died": "1829",
+          "scaleY": 3,
+          "profession": "linguist"
+      },
+      {
+          "first": "Jacob",
+          "last": "Grimm",
+          "born": "1785",
+          "died": "1863",
+          "scaleY": 5.5,
+          "profession": "linguist"
+      },
+      {
+          "first": "Rasmus",
+          "last": "Rask",
+          "born": "1787",
+          "died": "1832",
+          "scaleY": 1.5,
+          "profession": "linguist"
+      },
+      {
+          "first": "Franz",
+          "last": "Bopp",
+          "born": "1791",
+          "died": "1867",
+          "scaleY": 3.5,
+          "profession": "linguist"
+      },
+      {
+          "first": "Hermann",
+          "last": "Grassmann",
+          "born": "1809",
+          "died": "1877",
+          "scaleY": 5,
+          "profession": "linguist"
+      },
+      {
+          "first": "Karl Richard",
+          "last": "Lepsius",
+          "born": "1810",
+          "died": "1884",
+          "scaleY": 2,
+          "profession": "linguist"
+      },
+      {
+          "first": "Georg",
+          "last": "Curtius",
+          "born": "1820",
+          "died": "1886",
+          "scaleY": 2,
+          "profession": "linguist"
+      },
+      {
+          "first": "Rudolph von",
+          "last": "Roth",
+          "born": "1821",
+          "died": "1895",
+          "scaleY": 4.8,
+          "profession": "linguist"
+      },
+      {
+          "first": "Auguste ",
+          "last": "Schleicher",
+          "born": "1821",
+          "died": "1868",
+          "scaleY": 6.75,
+          "profession": "linguist"
+      },
+      {
+          "first": "F. Max",
+          "last": "Mueller",
+          "born": "1823",
+          "died": "1900",
+          "scaleY": 2,
+          "profession": "linguist"
+      },
+      {
+          "first": "Albrecht",
+          "last": "Weber",
+          "born": "1825",
+          "died": "1932",
+          "scaleY": 5,
+          "profession": "linguist"
+      },
+      {
+          "first": "William Dwight",
+          "last": "Whitney",
+          "born": "1827",
+          "died": "1894",
+          "scaleY": 3.5,
+          "profession": "linguist"
+      },
+      {
+          "first": "Michel ",
+          "last": "Breal",
+          "born": "1832",
+          "died": "1915",
+          "scaleY": 5,
+          "profession": "linguist"
+      },
+      {
+          "first": "Heymann",
+          "last": "Steinthal",
+          "born": "1823",
+          "died": "1899",
+          "scaleY": 3,
+          "profession": "anthropologist"
+      },
+      {
+          "first": "Friedrich",
+          "last": "Hegel",
+          "born": "1776",
+          "died": "1841",
+          "profession": "philosopher"
+      },
+      {
+          "first": "Auguste ",
+          "last": "Comte",
+          "born": "1798",
+          "died": "1857",
+          "scaleY": 5,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Friedrich",
+          "last": "Trendelenberg",
+          "born": "1802",
+          "died": "1872",
+          "scaleY": 3.25,
+          "profession": "philosopher"
+      },
+      {
+          "first": "John Stuart",
+          "last": "Mill",
+          "born": "1806",
+          "died": "1873",
+          "scaleY": 6.75,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Gustav",
+          "last": "Fechner",
+          "born": "1801",
+          "died": "1887",
+          "scaleY": 0.1,
+          "profession": "psychologist"
+      },
+      {
+          "first": "Hermann",
+          "last": "Lotze",
+          "born": "1817",
+          "died": "1881",
+          "scaleY": 0.1,
+          "profession": "psychologist"
+      },
+      {
+          "first": "Wilhelm  ",
+          "last": "Wundt",
+          "born": "1832",
+          "died": "1910",
+          "scaleY": 9.5,
+          "profession": "psychologist"
+      },
+      {
+      "first": "William Rainey",
+      "last": "Harper",
+      "born": "1856",
+      "died": "1906",
+          "scaleY": 2.5,
+      "profession": "linguist"
+    },
+    {
+      "first": "Charles R.",
+      "last": "Lanman",
+      "born": "1850",
+      "died": "1941",
+          "scaleY": 2.25,
+      "profession": "linguist"
+    },
+    {
+      "first": "Berthold",
+      "last": "Delbruek",
+      "born": "1842",
+      "died": "1922",
+        "scaleY": 6.75,
+      "profession": "linguist"
+    },
+    {
+      "first": "Hermann",
+      "last": "Osthoff",
+      "born": "1847",
+      "died": "1909",
+        "scaleY": 1.15,
+      "profession": "linguist"
+    },
+    {
+      "first": "John",
+      "last": "Dewey",
+      "born": "1859",
+      "died": "1952",
+        "scaleY": 5,
+      "profession": "linguist"
+    },
+    {
+      "first": "Karl",
+      "last": "Brugmann",
+      "born": "1849",
+      "died": "1919",
+        "scaleY": 6,
+      "profession": "linguist"
+    },
+    {
+      "first": "Auguste ",
+      "last": "Leskien",
+      "born": "1840",
+      "died": "1916",
+          "scaleY": 4.8,
+      "profession": "linguist"
+    },
+    {
+      "first": "Hugo",
+      "last": "Schuchardt",
+      "born": "1842",
+      "died": "1927",
+          "scaleY": 2,
+      "profession": "linguist"
+    },
+    {
+      "first": "Jan ",
+      "last": "Baudouin de Courtenay",
+      "born": "1845",
+      "died": "1929",
+          "scaleY": 4.8,
+      "profession": "linguist"
+    },
+    {
+      "first": "Eduard",
+      "last": "Sievers",
+      "born": "1850",
+      "died": "1932",
+        "scaleY": 0.1,
+      "profession": "linguist"
+    },
+    {
+      "first": "Ferdinand de",
+      "last": "Saussure",
+      "born": "1857",
+      "died": "1913",
+        "scaleY": 1.15,
+      "profession": "linguist"
+    },
+    {
+      "first": "Franz",
+      "last": "Boas",
+      "born": "1859",
+      "died": "1942",
+          "scaleY": 3,
+      "profession": "anthropologist"
+    },
+    {
+        "first": "Carl",
+        "last": "Buck",
+        "born": "1866",
+        "died": "1955",
+        "scaleY": 1.5,
+        "profession": "linguist"
+    },
+    {
+      "first": "Antoine",
+      "last": "Meillet",
+      "born": "1866",
+      "died": "1936",
+        "scaleY": 5,
+      "profession": "linguist"
+    },
+      {
+          "first": "David",
+          "last": "Hilbert",
+          "born": "1862",
+          "died": "1943",
+          "scaleY": 3,
+          "profession": "mathematician"
+      },
+      {
+          "first": "Georg",
+          "last": "Cantor",
+          "born": "1845",
+          "died": "1918",
+          "scaleY": 3,
+          "profession": "mathematician"
+      },
+      {
+          "first": "Anton",
+          "last": "Marty",
+          "born": "1847",
+          "died": "1914",
+          "scaleY": 1.5,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Tomas",
+          "last": "Masaryk",
+          "born": "1850",
+          "died": "1937",
+          "scaleY": 10,
+          "profession": "linguist"
+      },
+      {
+          "first": "Edmund",
+          "last": "Husserl",
+          "born": "1859",
+          "died": "1938",
+          "scaleY": 2,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Christian von",
+          "last": "Ehrenfels",
+          "born": "1859",
+          "died": "1932",
+          "scaleY": 6.5,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Sigmund",
+          "last": "Freud",
+          "born": "1856",
+          "died": "1939",
+          "scaleY": 0.1,
+          "profession": "psychologist"
+      },
+      {
+          "first": "Carl",
+          "last": "Stumpf",
+          "born": "1848",
+          "died": "1936",
+          "scaleY": 2.5,
+          "profession": "psychologist"
+      },
+      {
+          "first": "Alexis",
+          "last": "Meinong",
+          "born": "1853",
+          "died": "1920",
+          "scaleY": 9.5,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Kasimir",
+          "last": "Twardowski",
+          "born": "1866",
+          "died": "1938",
+          "scaleY": 5,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Theodule",
+          "last": "Ribot",
+          "born": "1839",
+          "died": "1916",
+          "scaleY": 0.1,
+          "profession": "psychologist"
+      },
+      {
+          "first": "Charles Sanders ",
+          "last": "Peirce",
+          "born": "1839",
+          "died": "1914",
+          "scaleY": 9.25,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Wililam",
+          "last": "James",
+          "born": "1842",
+          "died": "1949",
+          "scaleY": 0.1,
+          "profession": "psychologist"
+      },
+      {
+          "first": "James ",
+          "last": "Angell",
+          "born": "1869",
+          "died": "1949",
+          "scaleY": 9.5,
+          "profession": "psychologist"
+      },
+      {
+          "first": "Edward",
+          "last": "Titchener",
+          "born": "1867",
+          "died": "1927",
+          "scaleY": 7.75,
+          "profession": "psychologist"
+      },
+      {
+          "first": "Max ",
+          "last": "Meyer",
+          "born": "1873",
+          "died": "1967",
+          "scaleY": 8,
+          "profession": "psychologist"
+      },
+      {
+          "first": "Jacques",
+          "last": "Loeb",
+          "born": "1859",
+          "died": "1924",
+          "scaleY": 6.5,
+          "profession": "psychologist"
+      },
+      {
+          "first": "Harry",
+          "last": "Hoijer",
+          "born": "1904",
+          "died": "1976",
+          "scaleY": 10,
+          "profession": "linguist"
+      },
+      {
+          "first": "Morris ",
+          "last": "Swadesh",
+          "born": "1909",
+          "died": "1967",
+          "scaleY": 4.5,
+          "profession": "linguist"
+      },
+      {
+          "first": "Stanley",
+          "last": "Newman",
+          "born": "1905",
+          "died": "1984",
+          "scaleY": 8.75,
+          "profession": "linguist"
+      },
+      {
+          "first": "Mary",
+          "last": "Haas",
+          "born": "1910",
+          "died": "1996",
+          "scaleY": 7.25,
+          "profession": "linguist"
+      },
+      {
+          "first": "Carl",
+          "last": "Voegelin",
+          "born": "1906",
+          "died": "1986",
+          "scaleY": 7.5,
+          "profession": "linguist"
+      },
+      {
+          "first": "Charles R.",
+          "last": "Hockett",
+          "born": "1916",
+          "died": "2000",
+          "scaleY": 6,
+          "profession": "linguist"
+      },
+      {
+          "first": "Zellig S.",
+          "last": "Harris",
+          "born": "1906",
+          "died": "1986",
+          "scaleY": 4,
+          "profession": "linguist"
+      },
+      {
+          "first": "Margaret",
+          "last": "Mead",
+          "born": "1901",
+          "died": "1978",
+          "scaleY": 3,
+          "profession": "anthropologist"
+      },
+    {
+      "first": "Ruth",
+      "last": "Benedict",
+      "born": "1887",
+      "died": "1948",
+          "scaleY": 3,
+      "profession": "anthropologist"
+    },
+    {
+      "first": "Leonard",
+      "last": "Bloomfield",
+      "born": "1887",
+      "died": "1949",
+        "scaleY": 1.5,
+      "profession": "linguist"
+    },
+    {
+      "first": "Kenneth",
+      "last": "Pike",
+      "born": "1905",
+      "died": "1984",
+          "scaleY": 2.75,
+      "profession": "linguist"
+    },
+    {
+      "first": "Ludwig",
+      "last": "Wittgenstein",
+      "born": "1889",
+        "died": "1953",
+        "scaleY": 0.2,
+      "profession": "philosopher"
+    },
+    {
+      "first": "Jan ",
+      "last": "Lukasiewicz",
+      "born": "1878",
+      "died": "1956",
+        "scaleY": 10,
+      "profession": "mathematician"
+    },
+    {
+      "first": "Bertrand",
+      "last": "Russell",
+      "born": "1872",
+      "died": "1970",
+          "scaleY": 0.2,
+      "profession": "philosopher"
+    },
+    {
+      "first": "Alelxander",
+      "last": "Koyre",
+      "born": "1892",
+      "died": "1964",
+      "scaleY": 2.5,
+      "profession": "philosopher"
+    },
+    {
+      "first": "Rudolf",
+      "last": "Carnap",
+      "born": "1891",
+      "died": "1970",
+      "scaleY": 7,
+      "profession": "philosopher"
+    },
+    {
+      "first": "Hans",
+      "last": "Reichenbach",
+      "born": "1891",
+      "died": "1953",
+      "scaleY": 5,
+      "profession": "philosopher"
+    },
+    {
+      "first": "Otto",
+      "last": "Neurath",
+      "born": "1882",
+      "died": "1945",
+      "scaleY": 6.5,
+      "profession": "philosopher"
+    },
+    {
+      "first": "Moritz",
+      "last": "Schlick",
+      "born": "1882",
+      "died": "1936",
+      "scaleY": 4.5,
+      "profession": "philosopher"
+    },
+    {
+      "first": "Ernst",
+      "last": "Cassirer",
+      "born": "1874",
+      "died": "1945",
+        "scaleY": 9.5,
+      "profession": "philosopher"
+    },
+    {
+      "first": "Kurt",
+      "last": "Koffka",
+      "born": "1886",
+      "died": "1941",
+        "scaleY": 0.1,
+      "profession": "psychologist"
+    },
+    {
+      "first": "Herbert S.",
+      "last": "Langfeld",
+      "born": "1879",
+        "died": "1958",
+        "scaleY": 4.5,
+      "profession": "psychologist"
+    },
+    {
+      "first": "Max",
+      "last": "Wertheimer",
+      "born": "1880",
+      "died": "1943",
+        "scaleY": 0.1,
+      "profession": "psychologist"
+    },
+    {
+      "first": "Kurt",
+      "last": "Lewin",
+      "born": "1890",
+      "died": "1947",
+        "scaleY": 0.1,
+      "profession": "psychologist"
+    },
+    {
+      "first": "Fritz",
+      "last": "Heider",
+      "born": "1896",
+      "died": "1988",
+        "scaleY": 0.1,
+      "profession": "psychologist"
+    },
+    {
+        "first": "John B.",
+        "last": "Watson",
+        "born": "1878",
+        "died": "1958",
+        "scaleY": 6.5,
+        "profession": "psychologist"
+    },
+    {
+      "first": "Jerome",
+      "last": "Bruner",
+      "born": "1915",
+      "died": "2018",
+        "scaleY": 2.5,
+      "profession": "psychologist"
+    },
+    {
+      "first": "Clark",
+      "last": "Hull",
+      "born": "1884",
+      "died": "1952",
+        "scaleY": 9.5,
+      "profession": "psychologist"
+    },
+    {
+      "first": "Karl",
+      "last": "Lashley",
+      "born": "1890",
+      "died": "1958",
+          "scaleY": 8,
+      "profession": "psychologist"
+    },
+    {
+      "first": "B.F.",
+      "last": "Skinner",
+      "born": "1904",
+      "died": "1990",
+          "scaleY": 6.5,
+      "profession": "psychologist"
+    },
+    {
+      "first": "Gordon",
+      "last": "Allport",
+      "born": "1897",
+      "died": "1967",
+          "scaleY": 2.5,
+      "profession": "psychologist"
+    },
+    {
+      "first": "Edward",
+      "last": "Tolman",
+      "born": "1886",
+      "died": "1959",
+        "scaleY": 8.5,
+      "profession": "psychologist"
+    },
+      {
+          "first": "Franz",
+          "last": "Brentano",
+          "born": "1838",
+          "died": "1917",
+          "scaleY": 5,
+          "profession": "philosopher"
+      },
+      {
+          "first": "Edward",
+          "last": "Sapir",
+          "born": "1884",
+          "died": "1939",
+          "scaleY": 6,
+          "profession": "linguist"
+      }
+  ]
+}
