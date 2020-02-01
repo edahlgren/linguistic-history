@@ -6,7 +6,7 @@ const width = 1080,
 
 const black = "#cccccc",
       yellow = "#fac11e",
-      dark_yellow = "#ebc23f",
+      dark_yellow = "#f7c111",
       green = "#98cf74",
       dark_green = "#7fc78b",
       blue = "#7dc6e3",
@@ -95,7 +95,7 @@ d3.json("data/middle.json").then(function(genealogy) {
         .append("rect")
         .attr("id", function(d) { return d.group; })
         .attr("fill", function(d) {
-            //return "#dbdbdb";
+            return "#fcfcfc";
             
             switch(d.group) {
             case "Moscow School":
@@ -203,13 +203,13 @@ d3.json("data/middle.json").then(function(genealogy) {
               })
               .call(function(g) {
                   g.append("text")
-                      .attr("fill", "#404040")
+                      .attr("fill", "#7a7a7a")
                       .attr("dy", "0.35em")
                       .text(function(d) {
                           return d.last;
                       });
                   g.append("text")
-                      .attr("fill", "#404040")
+                      .attr("fill", "#7a7a7a")
                       .attr("dy", 12)
                       .text(function(d) {
                           return d.born;
@@ -311,106 +311,106 @@ d3.json("data/middle.json").then(function(genealogy) {
           titchener_bottom = get_points_bottom(titchener, titchener_links.bottom.length);    
     
     // Connect Mathesius
-    connect_vertical(svg, "Mathesius-Marty", dark_yellow, {
+    connect_vertical(svg, "Mathesius-Marty", black, {
         start: mathesius_bottom[0],
         end: marty_left[0]
     });    
-    connect_vertical(svg, "Mathesius-Masaryk", dark_yellow, {
+    connect_vertical(svg, "Mathesius-Masaryk", black, {
         start: mathesius_bottom[1],
         end: masaryk_left[0]
     });
 
     // Connect Brentano
-    connect_vertical(svg, "Brentano-Marty", dark_green, {
+    connect_vertical(svg, "Brentano-Marty", black, {
         start: brentano_top[0],
         end: marty_right[0]
     });    
-    connect_vertical(svg, "Brentano-Masaryk", dark_yellow, {
+    connect_vertical(svg, "Brentano-Masaryk", black, {
         start: brentano_top[1],
         end: masaryk_right[0]
     });
-    connect_vertical(svg, "Brentano-Husserl", dark_green, {
+    connect_vertical(svg, "Brentano-Husserl", black, {
         start: brentano_top[2],
         end: husserl_right[0]
     });
-    connect_vertical(svg, "Brentano-Twardowski", dark_green, {
+    connect_vertical(svg, "Brentano-Twardowski", black, {
         start: brentano_top[3],
         end: twardowski_left[0]
     });
-    connect_vertical(svg, "Brentano-Ehrenfels", dark_green, {
+    connect_vertical(svg, "Brentano-Ehrenfels", black, {
         start: brentano_top[4],
         end: ehrenfels_left[0]
     });
-    connect_vertical(svg, "Brentano-Freud", dark_blue, {
+    connect_vertical(svg, "Brentano-Freud", black, {
         start: brentano_top[5],
         end: freud_left[0]
     });
-    connect_vertical(svg, "Brentano-Meinong", dark_green, {
+    connect_vertical(svg, "Brentano-Meinong", black, {
         start: brentano_top[6],
         end: meinong_left[0]
     });
-    connect_vertical(svg, "Brentano-Stumpf", dark_blue, {
+    connect_vertical(svg, "Brentano-Stumpf", black, {
         start: brentano_top[7],
         end: stumpf_left[0]
     });
     
-    connect_vertical_dashed(svg, "Brentano-Comte", dark_green, {
+    connect_vertical_dashed(svg, "Brentano-Comte", black, {
         start: brentano_bottom[0],
         end: comte_right[0]
     });
-    connect_vertical_dashed(svg, "Brentano-Trendelenberg", dark_green, {
+    connect_vertical_dashed(svg, "Brentano-Trendelenberg", black, {
         start: brentano_bottom[1],
         end: trendelenberg_left[0]
     });
-    connect_vertical_dashed(svg, "Brentano-Mill", dark_green, {
+    connect_vertical_dashed(svg, "Brentano-Mill", black, {
         start: brentano_bottom[2],
         end: mill_left[0]
     });
     
     // Connect Gestalt
-    connect_vertical(svg, "Langfeld-Stumpf", dark_blue, {
+    connect_vertical(svg, "Langfeld-Stumpf", black, {
         start: langfeld_left[0],
         end: stumpf_right[0]
     });
-    connect_vertical(svg, "Wertheimer-Stumpf", dark_blue, {
+    connect_vertical(svg, "Wertheimer-Stumpf", black, {
         start: wertheimer_left[0],
         end: stumpf_right[1]
     });
-    connect_vertical(svg, "Heider-Wertheimer", dark_blue, {
+    connect_vertical(svg, "Heider-Wertheimer", black, {
         start: heider_bottom[0],
         end: wertheimer_right[0]
     });
 
     // Connect Cassirer
-    connect_vertical(svg, "Cassirer-Lewin", dark_blue, {
+    connect_vertical(svg, "Cassirer-Lewin", black, {
         start: cassirer_top[0],
         end: lewin_left[0]
     });
 
     // Connect Jakobson
-    connect_vertical(svg, "Jakobson-Shpet", dark_yellow, {
+    connect_vertical(svg, "Jakobson-Shpet", black, {
         start: jakobson_bottom[0],
         end: shpet_right[0]
     });
 
     // Connect Russell
-    connect_vertical(svg, "Russell-Wittgenstein", dark_green, {
+    connect_vertical(svg, "Russell-Wittgenstein", black, {
         start: russell_top[0],
         end: wittgenstein_right[0]
     });
-    connect_vertical_dotted(svg, "Hilbert-Husserl", pink, {
+    connect_vertical_dotted(svg, "Hilbert-Husserl", black, {
         start: hilbert_bottom[0],
         end: husserl_left[0]
     });
     
     // Connect Chelpanov
-    connect_vertical(svg, "Chelpanov-Shpet", dark_yellow, {
+    connect_vertical(svg, "Chelpanov-Shpet", black, {
         start: chelpanov_top[0],
         end: shpet_left[0]
     });
 
     // Connect Wundt
-    connect_vertical(svg, "Wundt-Titchener", dark_blue, {
+    connect_vertical(svg, "Wundt-Titchener", black, {
         start: wundt_top[3],
         end: titchener_bottom[0]
     });
@@ -424,7 +424,7 @@ d3.json("data/middle.json").then(function(genealogy) {
         { x: brentano_top[0].x - 8, y: trendelenberg_left[1].y },
         trendelenberg_left[1]
     ];
-    connect_through(svg, "Marty-Trendelenberg", null, dark_green, marty_to_trendelenberg);
+    connect_through(svg, "Marty-Trendelenberg", null, black, marty_to_trendelenberg);
     
     const chelpanov_to_wundt = [
         chelpanov_bottom[0],
@@ -433,7 +433,7 @@ d3.json("data/middle.json").then(function(genealogy) {
         wundt_top[1],
     ];
     connect_through(svg, "Chelpanov-Wundt", "Brentano's Circle",
-                    dark_yellow, chelpanov_to_wundt);
+                    black, chelpanov_to_wundt);
 
     const wundt_to_angell = [
         wundt_top[2],
@@ -441,14 +441,14 @@ d3.json("data/middle.json").then(function(genealogy) {
         { x: angell_bottom[0].x, y: titchener_bottom[0].y + 8 },
         angell_bottom[0],
     ];
-    connect_through(svg, "Wundt-Angell", null, dark_blue, wundt_to_angell);
+    connect_through(svg, "Wundt-Angell", null, black, wundt_to_angell);
     
-    connect_vertical2(svg, "Wundt-unknown", "Brentano's Circle", dark_blue, {
+    connect_vertical2(svg, "Wundt-unknown", "Brentano's Circle", black, {
         start: wundt_top[0],
         end: { x: 0, y: brentano_corners.bottom_left.y + 16 }
     });
 
-    connect_vertical2(svg, "Koffka-unknown", "Moscow School", dark_blue, {
+    connect_vertical2(svg, "Koffka-unknown", "Moscow School", black, {
         start: koffka_left[0],
         end: { x: 0, y: koffka_left[0].y }
     });
@@ -787,40 +787,65 @@ function connect_vertical_dashed(svg, name, stroke, endpoints) {
     let points = connect_vertical_points(endpoints);
 
     // Make the line
+    let outline = svg.append("path")
+            .attr("d", svg_line(points))
+            .attr("id", name + "-outline")
+            .attr("class", "line")
+            .style("stroke", "#b0b0b0")
+            .style("stroke-width", points[0].r + 0.5)
+            .style("stroke-dasharray", "7,7")
+            .style("fill", "none");
+    
     let elem = svg.append("path")
             .attr("d", svg_line(points))
             .attr("id", name)
             .attr("class", "line")
-            .style("stroke", (stroke ? stroke : default_stroke))
+            .style("stroke", "#ffffff")
             .style("stroke-width", points[0].r)
-            .style("stroke-dasharray", "5,5")
+            .style("stroke-dasharray", "7,7")
             .style("fill", "none");
 }
 
 function connect_vertical_dotted(svg, name, stroke, endpoints) {
     let points = connect_vertical_points(endpoints);
 
-    // Make the line
+    let outline = svg.append("path")
+            .attr("d", svg_line(points))
+            .attr("id", name + "-outline")
+            .attr("class", "line")
+            .style("stroke", "#b0b0b0")
+            .style("stroke-width", points[0].r + 0.5)
+            .style("stroke-linecap", "round")
+            .style("stroke-dasharray", "1,10")
+            .style("fill", "none");
+    
     let elem = svg.append("path")
             .attr("d", svg_line(points))
             .attr("id", name)
             .attr("class", "line")
-            .style("stroke", (stroke ? stroke : default_stroke))
+            .style("stroke", "#ffffff")
             .style("stroke-width", points[0].r)
             .style("stroke-linecap", "round")
-            .style("stroke-dasharray", "1,5")
+            .style("stroke-dasharray", "1,10")
             .style("fill", "none");
 }
 
 function connect_vertical2(svg, name, before, stroke, endpoints) {
     let points = connect_vertical_points(endpoints);
 
-    // Make the line
+    let outline = svg.append("path")
+        .attr("d", svg_line(points))
+        .attr("id", name + "-outline")
+        .attr("class", "line")
+        .style("stroke", "#b0b0b0")
+        .style("stroke-width", points[0].r + 0.5)
+        .style("fill", "none");
+    
     let elem = svg.append("path")
             .attr("d", svg_line(points))
             .attr("id", name)
             .attr("class", "line")
-            .style("stroke", (stroke ? stroke : default_stroke))
+            .style("stroke", "#ffffff")
             .style("stroke-width", points[0].r)
             .style("fill", "none");
     
@@ -828,6 +853,7 @@ function connect_vertical2(svg, name, before, stroke, endpoints) {
         let prev = document.getElementById(before),
             parent = svg.node();
         parent.insertBefore(elem.node(), prev);
+        parent.insertBefore(outline.node(), elem.node());
     }
 }
 
@@ -836,11 +862,19 @@ function connect_through(svg, name, before, stroke, points) {
     console.log(points);
 
     // Make the line
+    let outline = svg.append("path")
+        .attr("d", svg_line(points))
+        .attr("id", name + "-outline")
+        .attr("class", "line")
+        .style("stroke", "#b0b0b0")
+        .style("stroke-width", points[0].r + 0.5)
+        .style("fill", "none");
+    
     let elem = svg.append("path")
             .attr("d", svg_line(points))
             .attr("id", name)
             .attr("class", "line")
-            .style("stroke", (stroke ? stroke : default_stroke))
+            .style("stroke", "#ffffff")
             .style("stroke-width", points[0].r)
             .style("fill", "none");
     
@@ -848,6 +882,7 @@ function connect_through(svg, name, before, stroke, points) {
         let prev = document.getElementById(before),
             parent = svg.node();
         parent.insertBefore(elem.node(), prev);
+        parent.insertBefore(outline.node(), elem.node());
     }
 }
 
@@ -906,9 +941,17 @@ function connect_vertical(svg, name, stroke, endpoints) {
     // Make the line
     svg.append("path")
         .attr("d", svg_line(points))
+        .attr("id", name + "-outline")
+        .attr("class", "line")
+        .style("stroke", "#b0b0b0")
+        .style("stroke-width", endpoints.start.r + 0.5)
+        .style("fill", "none");
+    
+    svg.append("path")
+        .attr("d", svg_line(points))
         .attr("id", name)
         .attr("class", "line")
-        .style("stroke", (stroke ? stroke : default_stroke))
+        .style("stroke", "#ffffff")
         .style("stroke-width", endpoints.start.r)
         .style("fill", "none");
 }
@@ -922,8 +965,9 @@ function show_points(svg, points, color) {
         .attr("r", function(d) { return d.r; })
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; })
-        .attr("stroke", "none")
-        .attr("fill", color);
+        .attr("stroke", "#b0b0b0")
+        .attr("stroke-width", 0.5)
+        .attr("fill", "#ffffff");
 }
 
 function get_corners(group) {

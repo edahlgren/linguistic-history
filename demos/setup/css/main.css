@@ -5,13 +5,13 @@
 }
 
 .svg-container {
-    margin-top: 3rem;
-    margin-bottom: 6rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+    float: left;
 }
 
 svg {
-    display: inline-block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fffff;
 }

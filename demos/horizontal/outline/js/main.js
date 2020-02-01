@@ -11,26 +11,15 @@ function background_color(profession) {
     case "linguists":
         return "#fafafa";
     case "psychologists":
-        return "#ddecf0";
+        return "rgba(221, 236, 240, 0.3)";
     case "anthropologists":
-        return "#d4b7a9";
+        return "rgba(212, 183, 169, 0.2)";
     case "mathematicians":
-        return "#ffffff";
+        return "#edeae6";
     case "philosophers":
         return "#f7f5f2";
     default:
         return "#ff0000";
-    }
-}
-
-function background_opacity(profession) {
-    switch (profession) {
-    case "psychologists":
-        return 0.3;
-    case "anthropologists":
-        return 0.2;
-    default:
-        return 1;
     }
 }
 
@@ -42,6 +31,19 @@ function circle_color(profession) {
         return "#e9f3f5";
     case "philosopher-circle":
         return "#f2eadf";
+    default:
+        return "#ff0000";
+    }    
+}
+
+function background_circle_color(profession) {
+    switch (profession) {
+    case "linguist-circle":
+        return "#d9d9d9";
+    case "psychologist-circle":
+        return "#dae8eb";
+    case "philosopher-circle":
+        return "#ebe2d5";
     default:
         return "#ff0000";
     }    
@@ -136,12 +138,9 @@ d3.json("data/subset.json").then(function(genealogy) {
         .enter()
         .append("rect")
         .attr("id", function(d) { return d.profession; })
-        .attr("fill", function(d) {
-            return background_color(d.profession);
-        })
-        .attr("opacity", function(d) {
-            return background_opacity(d.profession);
-        })
+        .attr("stroke", "#ffffff")
+        .attr("stroke-width", 3)
+        .attr("fill", "#fafafa")
         .attr("width", function(d) {
             return width;
         })
@@ -249,13 +248,13 @@ d3.json("data/subset.json").then(function(genealogy) {
               })
               .call(function(g) {
                   g.append("text")
-                      .attr("fill", "#7a7a7a")
+                      .attr("fill", "#404040")
                       .attr("dy", "0.35em")
                       .text(function(d) {
                           return d.last;
                       });
                   g.append("text")
-                      .attr("fill", "#7a7a7a")
+                      .attr("fill", "#404040")
                       .attr("dy", 10)
                       .text(function(d) {
                           return d.born;
@@ -1380,7 +1379,6 @@ const svg_line = d3.line()
           .y(function(d) { return d.y; });
 
 const curvature = 1;
-const line_color = "#b0b0b0";
 
 function connect_through(svg, name, points) {
     points = connect_through_points(points);
@@ -1389,7 +1387,7 @@ function connect_through(svg, name, points) {
     svg.append("path")
         .attr("d", svg_line(points))
         .attr("id", name)
-        .attr("stroke", line_color)
+        .attr("stroke", "#808080")
         .style("stroke-width", points[0].r)
         .style("fill", "none");
 }
@@ -1401,7 +1399,7 @@ function connect_vertical(svg, name, endpoints) {
     svg.append("path")
         .attr("d", svg_line(points))
         .attr("id", name)
-        .attr("stroke", line_color)
+        .attr("stroke", "#808080")
         .style("stroke-width", endpoints.start.r)
         .style("fill", "none");
 }
@@ -1413,7 +1411,7 @@ function connect_horizontal(svg, name, endpoints) {
     svg.append("path")
         .attr("d", svg_line(points))
         .attr("id", name)
-        .attr("stroke", line_color)
+        .attr("stroke", "#808080")
         .style("stroke-width", endpoints.start.r)
         .style("fill", "none");
 }
@@ -1584,14 +1582,16 @@ function connect(svg, data) {
                   .x(function(d) { return d.x; })
                   .y(function(d) { return d.y; });
 
+        // Background
+        
         // Show it
         d3.select("#shown-groups")
             .append("path")
             .attr("d", sharp_cornered_line(set.points()))
             .attr("id", set.name)
             .attr("stroke-width", 12)
-            .attr("stroke", function(d) { return circle_color(set.className); })
-            .attr("fill", function(d) { return circle_color(set.className); });
+            .attr("stroke", "none")
+            .attr("fill", "#fafafa");
     });
 
     data.lines.forEach(function(line) {

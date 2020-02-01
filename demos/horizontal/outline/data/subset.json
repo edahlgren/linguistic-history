@@ -316,7 +316,7 @@
           "last": "Hilbert",
           "born": "1862",
           "died": "1943",
-          "scaleY": 2.75,
+          "scaleY": 3,
           "profession": "mathematician"
       },
       {
@@ -324,7 +324,7 @@
           "last": "Cantor",
           "born": "1845",
           "died": "1918",
-          "scaleY": 2.75,
+          "scaleY": 3,
           "profession": "mathematician"
       },
       {

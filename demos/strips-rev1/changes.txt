@@ -1,0 +1,78 @@
+[First generation]
+  - Humboldt
+  - Schlegel
+  - Grimm
+  - Rask
+  - Bopp
+
+[Second generation]
+  - Grassmann
+  - Lepsius
+  - Curtius
+  - Roth
+  - Schleicher
+  - Mueller
+  - Weber
+  - Whitney
+  - Breal
+
+[Third generation]
+  - Schuchardt
+  - Baudouin de Courtenay
+  - Lanman
+  - Saussure
+  [Neo-grammarians]
+    - Leskien
+    - Delbrück
+    - Osthoff
+    - Brugmann
+    - Sievers
+
+Move Dewey into the philosopher strip
+Remove Harper altogether
+
+[Sapir]
+  - Sapir
+  - Pike
+  - Harris
+  - Swadesh
+  - Hockett
+  - Haas
+  - Voegelin
+  - Newman
+  - Hoijer
+  - Mead
+  - Benedict
+
+[Brentano]
+  - Brentano
+  - Marty
+  - Masaryk
+  - Husserl
+  - Twardowski
+  - Ehrenfels
+  - Freud
+  - Meinong
+  - Stumpf
+
+Move Masaryk into the philosopher strip
+
+[Vienna penumbra]
+  - Wittgenstein
+  - Reichenbach
+  [Vienna circle]
+    - Neurath
+    - Schlick
+    - Carnap
+
+Move Lukasiewicz to mathematician strip
+Add Ajdukiewicz to mathematician strip
+Move Russell to edge of philosopher and mathematician strip
+
+[Gestalt]
+  - Langfeld
+  - Wertheimer
+  - Koffka
+  - Lewin
+  - Heider
+

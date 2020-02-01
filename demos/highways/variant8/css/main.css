@@ -4,21 +4,6 @@
     width: fit-content;
 }
 
-.about {
-    margin-top: 6rem;
-    margin-bottom: 4rem;
-    width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about h1 {
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 2px;
-    font-size: 16px;
-    color: #707070;
-}
-
 .svg-container {
     margin-top: 3rem;
     margin-bottom: 6rem;
@@ -29,20 +14,4 @@ svg {
     margin-left: auto;
     margin-right: auto;
     background-color: #fffff;
-}
-
-.grid-y text {
-    color: #aaa;
-}
-
-.grid-y line {
-    stroke: lightgrey;
-    stroke-opacity: 0.2;
-    shape-rendering: crispEdges;
-}
-
-.grid-x line {
-    stroke: lightgrey;
-    stroke-opacity: 0.2;
-    shape-rendering: crispEdges;
 }

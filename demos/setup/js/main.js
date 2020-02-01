@@ -1,0 +1,73 @@
+// A simple d3.js prototype that draws circles
+
+const scaleFactor = 10,
+      padding = 20;
+
+// Load and parse the json data
+d3.json("data/database.json").then(function(database) {
+
+    // Open the developer tools in your browser to see the contents
+    // of this database object
+    console.log(database);
+
+    // Format of the data:
+    // {
+    //     "circles": [
+    //         {
+    //             "group": 1 or 2
+    //             "scale": number from 1-10
+    //         }
+    
+    // Find the maximum circle we'll draw, this determines
+    // the height of the SVG.
+    const maxScale = database.circles.map(function(circle) {
+        return circle.scale;
+    }).reduce(function(a, b) {
+        return Math.max(a, b);
+    });
+
+    // Find the combined width of the circles we'll draw, this determines
+    // the width of the SVG.
+    const scaled = database.circles.map(function(circle) {
+        return circle.scale * scaleFactor;
+    });
+    const sum = scaled.reduce(function(a, b) { return a+b; });
+
+    // Add padding
+    const width = sum + (database.circles.length*(padding-1));
+    // Scale circles by 10
+    const height = maxScale * scaleFactor;
+
+    // Create the SVG and add it to the HTML
+    var svg = d3.select("#svg-container").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+    // Last circle offset
+    let last_circle = 0;
+
+    // Add each circle
+    database.circles.forEach(function(circle) {
+        
+        let radius = (circle.scale * scaleFactor) / 2;
+        svg.append("circle")
+            .attr("r", radius)
+            .attr("cx", last_circle + radius)
+            .attr("cy", height / 2)
+            .attr("stroke", "none")
+            .attr("fill", function() {
+                switch (circle.group) {
+                case 1:
+                    return "#ffdd00"; // bright red
+                case 2:
+                    return "#002fff"; // bright blue
+                default:
+                    return "#000000"; // black
+                }
+            });
+
+        last_circle += (padding + radius*2);
+    });
+
+    // All circles have been added, check your browser
+});

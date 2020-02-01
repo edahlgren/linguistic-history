@@ -1,0 +1,19 @@
+const width = document.body.offsetWidth * 0.5;
+
+function stroke_color(profession) {
+    switch (profession) {
+    case "linguist":
+        return "#ebe2d5";
+    case "anthropologist":
+        return "#f2ddd3";
+    case "mathematician":
+        return "#e8e8e8";
+    case "philosopher":
+        return "#dfe6da";
+    case "psychologist":
+        return "#dae8eb";
+    default:
+        console.error("UNKNOWN PROFESSION!");
+        return "#ff0000";
+    }
+}

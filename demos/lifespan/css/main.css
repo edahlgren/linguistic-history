@@ -37,24 +37,3 @@ svg {
     margin-left: auto;
     margin-right: auto;
 }
-
-.grid-x line {
-    stroke: #cccccc;
-    stroke-opacity: 0.3;
-    shape-rendering: crispEdges;
-    stroke-width: 1px;
-}
-
-.grid-x text {
-    font-family: serif;
-    font-size: 7;
-    color: #aaa;
-}
-
-.subgroup text {
-    fill: #808080;
-}
-
-.person text {
-    fill: #404040;
-}

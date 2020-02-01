@@ -1,34 +1,39 @@
 // Constant dimensions
 const margin = {top: 20, right: 10, bottom: 30, left: 10},
       width = document.body.offsetWidth,
-      height = 436,
+      height = 500,
       display_height = height - margin.bottom,
       step = 8,
-      padding = 8;
+      padding = 8,
+      space_between = 1;
 
 function background_color(profession) {
     switch (profession) {
     case "linguists":
-        return "#fafafa";
-    case "psychologists":
-        return "#ddecf0";
+        return "#f7f5f2";
     case "anthropologists":
         return "#d4b7a9";
     case "mathematicians":
-        return "#ffffff";
+        return "#fffaed";
     case "philosophers":
-        return "#f7f5f2";
+        return "#c6cfc0";
+    case "psychologists":
+        return "#ddecf0";
     default:
-        return "#ff0000";
+        return "#ffffff";
     }
 }
 
 function background_opacity(profession) {
     switch (profession) {
+    case "philosophers":
+        return 0.1;
     case "psychologists":
         return 0.3;
     case "anthropologists":
         return 0.2;
+    case "mathematicians":
+        return 0.7;
     default:
         return 1;
     }
@@ -37,11 +42,15 @@ function background_opacity(profession) {
 function circle_color(profession) {
     switch (profession) {
     case "linguist-circle":
-        return "#f0f0f0";
+        return "#f2ece4";
+    case "linguist-sub-circle":
+        return "#f0e7da";
+    case "philosopher-circle":
+        return "#eef2eb";
+    case "philosopher-sub-circle":
+        return "#e4eddf";
     case "psychologist-circle":
         return "#e9f3f5";
-    case "philosopher-circle":
-        return "#f2eadf";
     default:
         return "#ff0000";
     }    
@@ -92,14 +101,14 @@ d3.json("data/subset.json").then(function(genealogy) {
     };
 
     // Scales for the y-axis
-    const outsiders_height = step * 4;
-    const display_step = (display_height - step - outsiders_height) / 3;
+    const outsiders_height = step * 4,
+          display_step = (display_height - (space_between*4) - step - outsiders_height) / 3;
 
     const band1 = { start: 0, end: display_step },
-          band2 = { start: band1.end, end: band1.end + outsiders_height/2 },
-          band3 = { start: band2.end, end: band2.end + outsiders_height/2 },
-          band4 = { start: band3.end, end: band3.end + display_step },
-          band5 = { start: band4.end, end: band4.end + display_step },
+          band2 = { start: band1.end + space_between, end: band1.end + outsiders_height/2 },
+          band3 = { start: band2.end + space_between, end: band2.end + outsiders_height/2 },
+          band4 = { start: band3.end + space_between, end: band3.end + display_step },
+          band5 = { start: band4.end + space_between, end: band4.end + display_step },
           band6 = { start: band5.end, end: band5.end + padding/2 };
     
     const yScale1 = d3.scaleLinear()
@@ -127,10 +136,10 @@ d3.json("data/subset.json").then(function(genealogy) {
     svg.selectAll("professions")
         .data([
             { profession: "linguists", band: band1 },
-            { profession: "psychologists", band: band5 },
             { profession: "anthropologists", band: band2 },
             { profession: "mathematicians", band: band3 },
             { profession: "philosophers", band: band4 },
+            { profession: "psychologists", band: band5 },
             { profession: "psychologists", band: band6 }
         ])
         .enter()
@@ -211,6 +220,11 @@ d3.json("data/subset.json").then(function(genealogy) {
         .style("font-size", 9)
         .style("fill", "#aaa");
     
+    svg.append("g")
+        .attr("id", "group-lines")
+        .attr("width", width)
+        .attr("height", height);
+    
     // Position the people
     const people = svg.append("g")
               .attr("font-family", "serif")
@@ -222,7 +236,7 @@ d3.json("data/subset.json").then(function(genealogy) {
               .join("g")
               .attr("class", "person")
               .attr("id", function(d) {
-                  return d.last;
+                  return d.last.split(' ').join('-');
               })
               .attr("transform", function(d) {
 
@@ -239,7 +253,7 @@ d3.json("data/subset.json").then(function(genealogy) {
                       case "psychologist":
                           return yScale5(person.scaleY ? person.scaleY : 5);
                       default:
-                          console.error("UNKNOWN PROFESSION!");
+                          console.error("No profession");
                           return 0;
                       }
                   };
@@ -258,13 +272,14 @@ d3.json("data/subset.json").then(function(genealogy) {
                       .attr("fill", "#7a7a7a")
                       .attr("dy", 10)
                       .text(function(d) {
-                          return d.born;
+                          return d.born
                       });
               });
     
     // Map out lines between each person
     connect(svg, {
         lines: [
+            /**
             {
                 from: { name: "Herder", side: "bottom" },
                 to: { name: "Kant", side: "right" },
@@ -307,74 +322,78 @@ d3.json("data/subset.json").then(function(genealogy) {
             },
             {
                 from: { name: "Whitney", side: "left" },
-                to: { name: "Mueller", side: "bottom" },
-                direction: "left"
-            },
-            {
-                from: { name: "Whitney", side: "left" },
-                to: { name: "Curtius", side: "bottom" },
-                direction: "left"
-            },
-            {
-                from: { name: "Whitney", side: "left" },
                 to: { name: "Bopp", side: "right" },
                 direction: "left"
             },
+             **/
             {
-                from: { name: "Whitney", side: "left" },
-                to: { name: "Lepsius", side: "bottom" },
+                from: "Whitney",
+                to: "Mueller",
                 direction: "left"
             },
             {
-                from: { name: "Weber", side: "right" },
-                to: { name: "Breal", side: "left" },
+                from: "Whitney",
+                to: "Curtius",
                 direction: "left"
             },
+            {
+                from: "Whitney",
+                to: "Lepsius",
+                direction: "left"
+            },
+            {
+                from: "Weber",
+                to: "Breal",
+                direction: "left"
+            },
+            /**
             {
                 from: { name: "Trendelenberg", side: "right" },
                 to: { name: "Marty", side: "bottom" },
                 direction: "left"
             },
+             **/
             {
-                from: { name: "Brentano", side: "right" },
-                to: { name: "Marty", side: "bottom" },
+                from: "Brentano",
+                to: "Marty",
                 direction: "right"
             },
             {
-                from: { name: "Brentano", side: "right" },
-                to: { name: "Masaryk", side: "bottom" },
+                from: "Brentano",
+                to: "Masaryk",
                 direction: "right"
             },
             {
-                from: { name: "Brentano", side: "right" },
-                to: { name: "Husserl", side: "bottom" },
+                from: "Brentano",
+                to: "Husserl",
                 direction: "right"
             },
             {
-                from: { name: "Brentano", side: "right" },
-                to: { name: "Twardowski", side: "left" },
+                from: "Brentano",
+                to: "Twardowski",
                 direction: "right"
             },
             {
-                from: { name: "Brentano", side: "right" },
-                to: { name: "Ehrenfels", side: "top" },
+                from: "Brentano",
+                to: "Ehrenfels",
                 direction: "right"
             },
             {
-                from: { name: "Brentano", side: "right" },
-                to: { name: "Meinong", side: "top" },
+                from: "Brentano",
+                to: "Meinong",
                 direction: "right"
             },
             {
-                from: { name: "Brentano", side: "right" },
-                to: { name: "Freud", side: "top" },
+                from: "Brentano",
+                to: "Freud",
                 direction: "right"
             },
             {
-                from: { name: "Brentano", side: "right" },
-                to: { name: "Stumpf", side: "top" },
+                from: "Brentano",
+                to: "Stumpf",
                 direction: "right"
             },
+            /**
             {
                 from: { name: "Stumpf", side: "right" },
                 to: { name: "Langfeld", side: "top" },
@@ -468,11 +487,13 @@ d3.json("data/subset.json").then(function(genealogy) {
                 to: { name: "Bruner", side: "left" },
                 direction: "right"
             },
+             **/
             {
-                from: { name: "Wertheimer", side: "bottom" },
-                to: { name: "Heider", side: "left" },
+                from: "Wertheimer",
+                to: "Heider",
                 direction: "right"
             },
+            /**
             {
                 from: { name: "Hilbert", side: "bottom" },
                 to: { name: "Husserl", side: "right" },
@@ -508,10 +529,11 @@ d3.json("data/subset.json").then(function(genealogy) {
                 to: { name: "Lanman", side: "bottom" },
                 direction: "right"
             },
+             **/
             {
-                from: { name: "Osthoff", side: "right" },
-                to: { name: "Saussure", side: "left" },
-                direction: "right"
+                from: "Osthoff",
+                to: "Saussure",
+                direction: "up"
             },
             /**
             {
@@ -544,7 +566,6 @@ d3.json("data/subset.json").then(function(genealogy) {
                 to: { name: "Jakobson", side: "left" },
                 direction: "right"
             },
-             **/
             {
                 from: { name: "Steinthal", side: "right" },
                 to: { name: "Boas", side: "left" },
@@ -590,54 +611,56 @@ d3.json("data/subset.json").then(function(genealogy) {
                     connect_horizontal(svg, name + "-2", {start: start, end: end});
                 }
             },
+             **/
             {
-                from: { name: "Benedict", side: "right" },
-                to: { name: "Mead", side: "left" },
+                from: "Benedict",
+                to: "Mead",
                 direction: "right"
             },
             {
-                from: { name: "Sapir", side: "right" },
-                to: { name: "Pike", side: "bottom" },
+                from: "Sapir",
+                to: "Pike",
                 direction: "right"
             },
             {
-                from: { name: "Sapir", side: "right" },
-                to: { name: "Harris", side: "bottom" },
+                from: "Sapir",
+                to: "Harris",
                 direction: "right"
             },
             {
-                from: { name: "Sapir", side: "right" },
-                to: { name: "Haas", side: "top" },
+                from: "Sapir",
+                to: "Haas",
                 direction: "right"
             },
             {
-                from: { name: "Sapir", side: "right" },
-                to: { name: "Hockett", side: "left" },
+                from: "Sapir",
+                to: "Hockett",
                 direction: "right"
             },
             {
-                from: { name: "Sapir", side: "right" },
-                to: { name: "Swadesh", side: "bottom" },
+                from: "Sapir",
+                to: "Swadesh",
                 direction: "right"
             },
             {
-                from: { name: "Sapir", side: "right" },
-                to: { name: "Voegelin", side: "top" },
+                from: "Sapir",
+                to: "Voegelin",
                 direction: "right"
             },
             {
-                from: { name: "Sapir", side: "right" },
-                to: { name: "Newman", side: "left" },
+                from: "Sapir",
+                to: "Newman",
                 direction: "right"
             },
             {
-                from: { name: "Sapir", side: "right" },
-                to: { name: "Hoijer", side: "left" },
+                from: "Sapir",
+                to: "Hoijer",
                 direction: "right"
             },
+            /**
             {
-                from: { name: "Bloomfield", side: "right" },
-                to: { name: "Pike", side: "top" },
+                from: "Bloomfield",
+                to: "Pike",
                 direction: "right"
             },
             {
@@ -650,7 +673,6 @@ d3.json("data/subset.json").then(function(genealogy) {
                 to: { name: "Hockett", side: "top" },
                 direction: "right"
             },
-            /**
             {
                 from: { name: "Jakobson", side: "top" },
                 to: { name: "Halle", side: "left" },
@@ -700,7 +722,6 @@ o                },
             mathesius.list[0] = "Marty";
             mathesius.list[1] = "Masaryk";
             edges.set("Mathesius-left", mathesius);
-             **/
             
             let whitney = edges.get("Whitney-right");
             whitney.list[0] = "Lanman";
@@ -719,6 +740,7 @@ o                },
             werth.list[1] = "Allport";
             werth.list[2] = "Heider";
             edges.set("Wertheimer-bottom", werth);
+             **/
             
             return edges;
         },
@@ -728,7 +750,11 @@ o                },
                 className: "linguist-circle",
                 points: function() {
                     let corners = map_corners([
-                        "Humboldt", "Schlegel", "Rask", "Bopp", "Grimm"
+                        "Humboldt",
+                        "Schlegel",
+                        "Rask",
+                        "Bopp",
+                        "Grimm"
                     ]);
 
                     return [
@@ -738,30 +764,29 @@ o                },
                             x: corners.get("Rask").top_left.x,
                             y: corners.get("Schlegel").top_right.y
                         },
-                        corners.get("Schlegel").top_left,
                         {
-                            x: corners.get("Schlegel").top_left.x,
-                            y: corners.get("Humboldt").top_right.y
+                            x: corners.get("Humboldt").top_left.x,
+                            y: corners.get("Schlegel").top_left.y
                         },
-                        corners.get("Humboldt").top_left,
                         corners.get("Humboldt").bottom_left,
                         {
-                            x: corners.get("Grimm").top_left.x,
-                            y: corners.get("Humboldt").bottom_right.y
+                            x: corners.get("Grimm").bottom_left.x - 4,
+                            y: corners.get("Humboldt").bottom_left.y
                         },
-                        corners.get("Grimm").bottom_left,
-                        corners.get("Grimm").bottom_right,
                         {
-                            x: corners.get("Grimm").bottom_right.x,
-                            y: corners.get("Bopp").bottom_right.y
+                            x: corners.get("Grimm").bottom_left.x - 4,
+                            y: corners.get("Grimm").bottom_left.y + 4
+                        },
+                        {
+                            x: corners.get("Bopp").top_right.x,
+                            y: corners.get("Grimm").bottom_right.y + 4
                         },
                         corners.get("Bopp").bottom_right,
-                        corners.get("Bopp").top_right,
                         {
-                            x: corners.get("Rask").bottom_right.x,
-                            y: corners.get("Bopp").top_right.y
+                            x: corners.get("Bopp").bottom_right.x,
+                            y: corners.get("Rask").top_right.y
                         },
-                        corners.get("Rask").top_right
+                        corners.get("Rask").top_left
                     ];                    
                 }
             },
@@ -770,7 +795,14 @@ o                },
                 className: "linguist-circle",
                 points: function() {
                     let corners = map_corners([
-                        "Mueller", "Curtius", "Lepsius", "Grassmann", "Schleicher", "Weber"
+                        "Mueller",
+                        "Curtius",
+                        "Lepsius",
+                        "Grassmann",
+                        "Schleicher",
+                        "Weber",
+                        "Breal",
+                        "Whitney"
                     ]);
                     return [
                         corners.get("Mueller").top_right,
@@ -787,19 +819,23 @@ o                },
                         corners.get("Grassmann").top_left,
                         corners.get("Grassmann").bottom_left,
                         {
-                            x: corners.get("Schleicher").top_left.x,
+                            x: corners.get("Schleicher").bottom_left.x,
                             y: corners.get("Grassmann").bottom_left.y
                         },
                         corners.get("Schleicher").bottom_left,
-                        corners.get("Schleicher").bottom_right,
                         {
-                            x: corners.get("Schleicher").bottom_right.x,
-                            y: corners.get("Weber").bottom_left.y
+                            x: corners.get("Breal").bottom_right.x,
+                            y: corners.get("Schleicher").bottom_left.y
                         },
-                        corners.get("Weber").bottom_right,
+                        corners.get("Breal").top_right,
                         {
-                            x: corners.get("Weber").top_right.x,
-                            y: corners.get("Mueller").bottom_right.y
+                            x: corners.get("Whitney").top_right.x,
+                            y: corners.get("Breal").top_left.y
+                        },
+                        corners.get("Whitney").top_right,
+                        {
+                            x: corners.get("Mueller").top_right.x,
+                            y: corners.get("Whitney").top_right.y
                         },
                         corners.get("Mueller").bottom_right,
                         corners.get("Mueller").top_right
@@ -811,8 +847,85 @@ o                },
                 className: "linguist-circle",
                 points: function() {
                     let corners = map_corners([
-                        "Leskien", "Delbruek", "Brugmann", "Grassmann", "Boas", "Harper",
-                        "Dewey", "Saussure", "Sievers", "Osthoff", "Schuchardt"
+                        "Baudouin-de-Courtenay",
+                        "Schuchardt",
+                        "Leskien",
+                        "Delbruck",
+                        "Sievers",
+                        "Brugmann",
+                        "Saussure",
+                        "Lanman"
+                    ]);
+                    return [
+                        {
+                            x: corners.get("Schuchardt").top_left.x,
+                            y: corners.get("Baudouin-de-Courtenay").top_left.y
+                        },
+                        corners.get("Schuchardt").bottom_left,
+                        {
+                            x: corners.get("Leskien").top_left.x - 8,
+                            y: corners.get("Schuchardt").bottom_left.y
+                        },
+                        {
+                            x: corners.get("Leskien").top_left.x - 8,
+                            y: corners.get("Delbruck").bottom_left.y + 8
+                        },
+                        {
+                            x: corners.get("Sievers").top_right.x + 8,
+                            y: corners.get("Delbruck").bottom_left.y + 8
+                        },
+                        {
+                            x: corners.get("Sievers").top_right.x + 8,
+                            y: corners.get("Saussure").bottom_left.y
+                        },
+                        corners.get("Saussure").bottom_right,
+                        corners.get("Saussure").top_right,
+                        {
+                            x: corners.get("Lanman").bottom_right.x,
+                            y: corners.get("Saussure").top_right.y
+                        },
+                        {
+                            x: corners.get("Lanman").bottom_right.x,
+                            y: corners.get("Baudouin-de-Courtenay").top_right.y
+                        }
+                    ];
+                }
+            },
+            {
+                name: "neo-grammarians",
+                className: "linguist-sub-circle",
+                points: function() {
+                    let corners = map_corners([
+                        "Leskien", "Delbruck", "Brugmann", "Sievers", "Osthoff"
+                    ]);
+                    return [
+                        corners.get("Leskien").top_left,
+                        corners.get("Leskien").bottom_left,
+                        {
+                            x: corners.get("Delbruck").top_left.x,
+                            y: corners.get("Leskien").bottom_left.y
+                        },
+                        corners.get("Delbruck").bottom_left,
+                        {
+                            x: corners.get("Sievers").bottom_right.x,
+                            y: corners.get("Delbruck").bottom_right.y
+                        },
+                        {
+                            x: corners.get("Sievers").top_right.x,
+                            y: corners.get("Leskien").top_right.y
+                        },
+                        corners.get("Leskien").top_left
+                    ];
+                }
+            },
+            /**
+            {
+                name: "third_generation",
+                className: "linguist-circle",
+                points: function() {
+                    let corners = map_corners([
+                        "Leskien", "Delbruek", "Brugmann", "Grassmann",
+                        "Saussure", "Sievers", "Osthoff", "Schuchardt"
                     ]);
                     return [
                         corners.get("Sievers").top_left,
@@ -837,23 +950,6 @@ o                },
                             y: corners.get("Leskien").bottom_left.y
                         },
                         corners.get("Delbruek").bottom_left,
-                        {
-                            x: corners.get("Boas").top_left.x,
-                            y: corners.get("Delbruek").bottom_left.y
-                        },
-                        corners.get("Boas").bottom_left,
-                        {
-                            x: corners.get("Dewey").bottom_right.x,
-                            y: corners.get("Boas").bottom_right.y
-                        },
-                        {
-                            x: corners.get("Dewey").top_right.x,
-                            y: corners.get("Dewey").top_right.y
-                        },
-                        {
-                            x: corners.get("Saussure").bottom_right.x,
-                            y: corners.get("Dewey").top_right.y
-                        },
                         corners.get("Saussure").top_right,
                         {
                             x: corners.get("Sievers").bottom_right.x,
@@ -864,13 +960,23 @@ o                },
                     ];
                 }
             },
+             **/
             {
                 name: "sapir_circle",
                 className: "linguist-circle",
                 points: function() {
                     let corners = map_corners([
-                        "Sapir", "Benedict", "Mead", "Hoijer", "Voegelin", "Haas", "Hockett",
-                        "Swadesh", "Harris", "Bloomfield"
+                        "Sapir",
+                        "Benedict",
+                        "Mead",
+                        "Hoijer",
+                        "Voegelin",
+                        "Newman",
+                        "Haas",
+                        "Hockett",
+                        "Swadesh",
+                        "Harris",
+                        "Pike"
                     ]);
                     return [
                         corners.get("Sapir").top_left,
@@ -879,27 +985,27 @@ o                },
                             x: corners.get("Benedict").top_left.x,
                             y: corners.get("Sapir").bottom_left.y
                         },
-                        corners.get("Benedict").bottom_left,
-                        corners.get("Benedict").bottom_right,
                         {
-                            x: corners.get("Benedict").bottom_right.x,
-                            y: corners.get("Voegelin").bottom_left.y
+                            x: corners.get("Benedict").bottom_left.x,
+                            y: corners.get("Benedict").bottom_left.y - 4
                         },
                         {
-                            x: corners.get("Mead").bottom_left.x,
-                            y: corners.get("Voegelin").bottom_left.y
+                            x: corners.get("Mead").bottom_right.x,
+                            y: corners.get("Mead").bottom_right.y - 4
                         },
-                        corners.get("Mead").bottom_left,
-                        corners.get("Mead").bottom_right,
                         {
                             x: corners.get("Mead").bottom_right.x,
                             y: corners.get("Hoijer").bottom_left.y
                         },
                         {
-                            x: corners.get("Voegelin").bottom_right.x,
+                            x: corners.get("Newman").bottom_right.x + 4,
                             y: corners.get("Hoijer").bottom_left.y
                         },
-                        corners.get("Voegelin").bottom_right,
+                        {
+                            x: corners.get("Newman").bottom_right.x + 4,
+                            y: corners.get("Haas").bottom_right.y
+                        },
+                        corners.get("Haas").bottom_right,
                         {
                             x: corners.get("Haas").bottom_right.x,
                             y: corners.get("Voegelin").bottom_right.y
@@ -911,12 +1017,22 @@ o                },
                         corners.get("Hockett").bottom_right,
                         corners.get("Hockett").top_right,
                         {
-                            x: corners.get("Hockett").top_right.x,
-                            y: corners.get("Bloomfield").top_right.y
+                            x: corners.get("Swadesh").top_right.x,
+                            y: corners.get("Hockett").top_right.y
                         },
-                        corners.get("Bloomfield").top_left,
+                        corners.get("Swadesh").top_right,
                         {
-                            x: corners.get("Bloomfield").top_left.x,
+                            x: corners.get("Harris").top_right.x,
+                            y: corners.get("Swadesh").top_right.y
+                        },
+                        {
+                            x: corners.get("Pike").top_right.x,
+                            y: corners.get("Swadesh").top_right.y
+                        },
+                        corners.get("Pike").top_right,
+                        corners.get("Pike").top_left,
+                        {
+                            x: corners.get("Pike").top_left.x,
                             y: corners.get("Sapir").top_right.y
                         },
                         corners.get("Sapir").top_left
@@ -924,69 +1040,248 @@ o                },
                 }
             },
             {
-                name: "wittgenstein_circle",
+                name: "vienna_penumbra",
                 className: "philosopher-circle",
                 points: function() {
                     let corners = map_corners([
-                        "Wittgenstein", "Lukasiewicz", "Koyre"
+                        "Wittgenstein",
+                        "Reichenbach",
+                        "Schlick",
+                        "Neurath",
+                        "Carnap"
                     ]);
                     return [
-                        corners.get("Lukasiewicz").top_left,
-                        corners.get("Lukasiewicz").top_right,
+                        corners.get("Wittgenstein").top_left,
                         {
-                            x: corners.get("Lukasiewicz").top_right.x,
+                            x: corners.get("Wittgenstein").top_left.x,
+                            y: corners.get("Neurath").top_left.y - 8
+                        },
+                        {
+                            x: corners.get("Neurath").top_left.x - 8,
+                            y: corners.get("Neurath").top_left.y - 8
+                        },
+                        {
+                            x: corners.get("Neurath").top_left.x - 8,
+                            y: corners.get("Schlick").bottom_left.y + 8
+                        },
+                        {
+                            x: corners.get("Reichenbach").bottom_right.x + 8,
+                            y: corners.get("Carnap").bottom_right.y + 8
+                        },
+                        {
+                            x: corners.get("Reichenbach").bottom_right.x + 8,
                             y: corners.get("Wittgenstein").top_left.y
                         },
-                        corners.get("Wittgenstein").top_right,
-                        corners.get("Wittgenstein").bottom_right,
-                        {
-                            x: corners.get("Lukasiewicz").bottom_left.x,
-                            y: corners.get("Wittgenstein").bottom_left.y
-                        },
-                        corners.get("Lukasiewicz").top_left                        
+                        corners.get("Wittgenstein").top_left
                     ];
                 }
             },
             {
                 name: "vienna_circle",
-                className: "philosopher-circle",
+                className: "philosopher-sub-circle",
                 points: function() {
                     let corners = map_corners([
-                        "Neurath", "Carnap", "Koyre", "Schlick"
+                        "Schlick",
+                        "Neurath",
+                        "Carnap"
                     ]);
                     return [
-                        corners.get("Neurath").bottom_left,
-                        {
-                            x: corners.get("Carnap").bottom_left.x,
-                            y: corners.get("Neurath").bottom_left.y
-                        },
-                        corners.get("Carnap").bottom_left,
-                        {
-                            x: corners.get("Koyre").top_right.x,
-                            y: corners.get("Carnap").bottom_right.y
-                        },
-                        corners.get("Koyre").top_right,
-                        corners.get("Koyre").top_left,
-                        {
-                            x: corners.get("Koyre").bottom_left.x,
-                            y: corners.get("Schlick").top_right.y
-                        },
-                        {
-                            x: corners.get("Neurath").top_left.x,
-                            y: corners.get("Schlick").top_left.y
-                        },
                         corners.get("Neurath").top_left,
-                        corners.get("Neurath").bottom_left
+                        corners.get("Schlick").bottom_left,
+                        corners.get("Schlick").bottom_right,
+                        {
+                            x: corners.get("Carnap").bottom_right.x,
+                            y: corners.get("Schlick").bottom_right.y
+                        },
+                        corners.get("Carnap").top_right,
+                        {
+                            x: corners.get("Neurath").bottom_right.x,
+                            y: corners.get("Carnap").top_right.y
+                        },
+                        corners.get("Neurath").top_right,
+                        corners.get("Neurath").top_left
                     ];
                 }
             },
             {
                 name: "brentanos_circle",
                 className: "philosopher-circle",
+                experimental: true,
                 points: function() {
                     let corners = map_corners([
-                        "Brentano", "Marty", "Masaryk", "Husserl", "Ehrenfels", "Freud", "Stumpf"
+                        "Brentano",
+                        "Marty",
+                        "Masaryk",
+                        "Husserl",
+                        "Twardowski",
+                        "Ehrenfels",
+                        "Freud",
+                        "Meinong",
+                        "Stumpf"
                     ]);
+
+                    let ps = [];
+                    corners.forEach(function(data, name, map) {
+                        ps.push(
+                            [data.top_left.x, data.top_left.y],
+                            [data.top_right.x, data.top_right.y],
+                            [data.bottom_left.x, data.bottom_left.y],
+                            [data.bottom_right.x, data.bottom_right.y]
+                        );
+                    });
+
+                    const delaunay = d3.Delaunay.from(ps);
+
+                    const simple_hull = d3.polygonHull(ps);
+                    const delaunay_hull = delaunay.hullPolygon();
+
+                    console.log("simple", simple_hull);
+                    console.log("delaunay", delaunay_hull);
+
+                    const centroid = d3.polygonCentroid(delaunay_hull);
+                    
+                    // Gather all triangles
+                    var all_triangles = [];
+
+                    let iter = delaunay.trianglePolygons(),
+                        next = iter.next();
+                    while (!next.done) {
+                        all_triangles.push(next.value);
+                        next = iter.next();
+                    }
+                    
+                    // Gather the exterior triangles
+                    var exterior_triangles = [];
+
+                    const halfedges = delaunay.halfedges;
+                    for (let i = 0, n = halfedges.length; i < n; ++i) {
+                        const j = halfedges[i];
+                        if (j < 0) {
+                            
+                            let triangle = Math.floor(i/3);
+
+                            const t0 = delaunay.triangles[triangle * 3 + 0];
+                            const t1 = delaunay.triangles[triangle * 3 + 1];
+                            const t2 = delaunay.triangles[triangle * 3 + 2];
+
+                            console.log("triangle(" + triangle + ")", t0, t1, t2);
+
+                            const t0_points = [delaunay.points[t0 * 2],
+                                               delaunay.points[t0 * 2 + 1]];
+                            const t1_points = [delaunay.points[t1 * 2],
+                                               delaunay.points[t1 * 2 + 1]];
+                            const t2_points = [delaunay.points[t2 * 2],
+                                               delaunay.points[t2 * 2 + 1]];
+
+                            console.log(t0_points, t1_points, t2_points);
+
+                            exterior_triangles.push([t0_points, t1_points, t2_points, t0_points]);
+                        }
+                    }
+
+                    console.log(exterior_triangles);
+
+                    var point_set = new Set();
+                    exterior_triangles.forEach(function(triangle) {
+                        point_set.add(triangle[0][0] + "," + triangle[0][1]);
+                        point_set.add(triangle[1][0] + "," + triangle[1][1]);
+                        point_set.add(triangle[2][0] + "," + triangle[2][1]);
+                    });
+
+                    function euclidean(cx, cy, ex, ey) {
+                        var dy = ey - cy;
+                        var dx = ex - cx;
+                        return Math.sqrt((dx*dx) + (dy*dy));
+                    }
+
+                    // Remove fourth points that are closest to the centroid
+                    corners.forEach(function(data, name, map) {
+                        const tl = data.top_left.x + "," + data.top_left.y,
+                              tr = data.top_right.x + "," + data.top_right.y,
+                              bl = data.bottom_left.x + "," + data.bottom_left.y,
+                              br = data.bottom_right.x + "," + data.bottom_right.y;
+
+                        if (point_set.has(tl) && point_set.has(tr) &&
+                            point_set.has(bl) && point_set.has(br)) {
+
+                            console.log("found 4 points:", name);
+
+                            var four = [
+                                {
+                                    x: data.top_left.x,
+                                    y: data.top_left.y
+                                },
+                                {
+                                    x: data.top_right.x,
+                                    y: data.top_right.y
+                                },
+                                {
+                                    x: data.bottom_left.x,
+                                    y: data.bottom_left.y
+                                },
+                                {
+                                    x: data.bottom_right.x,
+                                    y: data.bottom_right.y
+                                }
+                            ];
+                            
+                            for (var i = 0; i < four.length; i++)
+                                four[i].dist = euclidean(centroid[0], centroid[1],
+                                                         four[i].x, four[i].y);
+                            
+                            four.sort(function(a, b) {
+                                return a.dist - b.dist;
+                            });
+
+                            const closest = four[0].x + "," + four[0].y;
+                            point_set.delete(closest);
+                        }
+                    });                    
+                    
+
+                    function angle(cx, cy, ex, ey) {
+                        var dy = ey - cy;
+                        var dx = ex - cx;
+                        var theta = Math.atan2(dy, dx); // range (-PI, PI]
+                        theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+                        if (theta < 0) theta = 360 + theta; // range [0, 360)
+                        return theta;
+                    }
+                    
+                    var exterior_points = [];
+                    for (let item of point_set.values()) {
+                        console.log(item);
+                        let coords = item.split(','),
+                            x = parseFloat(coords[0]),
+                            y = parseFloat(coords[1]);
+                        exterior_points.push({
+                            x: x,
+                            y: y,
+                            theta: angle(centroid[0], centroid[1], x, y)
+                        });
+                    }
+                    console.log("exteriorpoints", exterior_points);
+
+                    exterior_points.sort(function(a, b) {
+                        return a.theta - b.theta;
+                    });
+                    console.log("(sorted) exterior points", exterior_points);
+
+                    // Add the first one to the end to ensure a closed loop
+                    exterior_points.push(exterior_points[0]);
+                    
+                    return {
+                        centroid: centroid,
+                        outer: delaunay_hull,
+                        all_triangles: all_triangles,
+                        exterior_triangles: exterior_triangles,
+                        exterior_points: exterior_points.map(function(p) {
+                            return [p.x, p.y];
+                        }),
+                        all: ps
+                    };
+                    
+                    /**
                     return [
                         corners.get("Brentano").top_left,
                         corners.get("Brentano").top_right,
@@ -1009,6 +1304,16 @@ o                },
                             x: corners.get("Ehrenfels").top_right.x,
                             y: corners.get("Husserl").top_right.y
                         },
+                        {
+                            x: corners.get("Ehrenfels").top_right.x,
+                            y: corners.get("Twardowski").top_right.y
+                        },
+                        corners.get("Twardowski").top_right,
+                        corners.get("Twardowski").bottom_right,
+                        {
+                            x: corners.get("Ehrenfels").top_right.x,
+                            y: corners.get("Twardowski").bottom_right.y
+                        },                        
                         corners.get("Ehrenfels").bottom_right,
                         {
                             x: corners.get("Freud").top_right.x,
@@ -1018,6 +1323,11 @@ o                },
                         corners.get("Freud").bottom_left,
                         {
                             x: corners.get("Freud").bottom_left.x,
+                            y: corners.get("Meinong").bottom_right.y
+                        },
+                        corners.get("Meinong").bottom_left,
+                        {
+                            x: corners.get("Meinong").bottom_left.x,
                             y: corners.get("Ehrenfels").bottom_right.y
                         },
                         {
@@ -1033,6 +1343,7 @@ o                },
                         corners.get("Brentano").bottom_left,
                         corners.get("Brentano").top_left
                     ];
+                     **/
                 }
             },
             {
@@ -1040,13 +1351,20 @@ o                },
                 className: "psychologist-circle",
                 points: function() {
                     let corners = map_corners([
-                        "Heider", "Wertheimer", "Langfeld"
+                        "Lewin",
+                        "Koffka",
+                        "Heider",
+                        "Wertheimer",
+                        "Langfeld"
                     ]);
                     return [
-                        corners.get("Heider").top_right,
+                        {
+                            x: corners.get("Heider").top_right.x,
+                            y: corners.get("Lewin").top_right.y
+                        },
                         {
                             x: corners.get("Langfeld").top_left.x,
-                            y: corners.get("Wertheimer").top_left.y
+                            y: corners.get("Koffka").top_left.y
                         },
                         corners.get("Langfeld").bottom_left,
                         corners.get("Langfeld").bottom_right,
@@ -1073,7 +1391,12 @@ function order_graph(genealogy) {
 
     // Order by birth
     const byBirth = genealogy.people.map(function(person) { 
-        return { last: person.last, born: parseInt(person.born, 10) };
+        return {
+            last: person.last,
+            born: parseInt(person.born, 10),
+            died: parseInt(person.died, 10),
+            government: (person.government ? true : false)
+        };
     }).sort(function(a, b) {
         // Ascending by order of birth
         if (a.born < b.born) return -1;
@@ -1087,7 +1410,7 @@ function order_graph(genealogy) {
     };
 }
 
-const conn_width = 1,
+const conn_width = 3,
       conn_padding_between = 1,
       conn_padding_away = 3,
       conn_with_padding = conn_width + conn_padding_between;
@@ -1125,6 +1448,19 @@ function map_corners(names) {
             corners = get_corners(element);
         return [name, corners];
     }));
+}
+
+function get_midpoint(lastname) {
+    const group = d3.select("#" + lastname),
+          corners = get_corners(group),
+          top_midpoint = corners.top_left.x + (corners.width / 2),
+          left_midpoint = corners.top_left.y + (corners.height / 2);
+    
+    return {
+        x: top_midpoint,
+        y: left_midpoint,
+        r: conn_width / 2
+    };
 }
 
 function get_points_top(group, conns) {
@@ -1379,8 +1715,10 @@ const svg_line = d3.line()
           .x(function(d) { return d.x; })
           .y(function(d) { return d.y; });
 
-const curvature = 1;
-const line_color = "#b0b0b0";
+const curvature = 30;
+//const line_color = "#b0b0b0";
+const line_color = "#ffffff",
+      line_opacity = 0.6;
 
 function connect_through(svg, name, points) {
     points = connect_through_points(points);
@@ -1391,6 +1729,7 @@ function connect_through(svg, name, points) {
         .attr("id", name)
         .attr("stroke", line_color)
         .style("stroke-width", points[0].r)
+        .style("stroke-opacity", line_opacity)
         .style("fill", "none");
 }
 
@@ -1398,11 +1737,13 @@ function connect_vertical(svg, name, endpoints) {
     let points = connect_vertical_points(endpoints);
 
     // Make the line
-    svg.append("path")
+    d3.select("#group-lines")
+        .append("path")
         .attr("d", svg_line(points))
         .attr("id", name)
         .attr("stroke", line_color)
         .style("stroke-width", endpoints.start.r)
+        .style("stroke-opacity", line_opacity)
         .style("fill", "none");
 }
 
@@ -1410,135 +1751,36 @@ function connect_horizontal(svg, name, endpoints) {
     let points = connect_horizontal_points(endpoints);
 
     // Make the line
-    svg.append("path")
+    d3.select("#group-lines")
+        .append("path")
         .attr("d", svg_line(points))
         .attr("id", name)
         .attr("stroke", line_color)
         .style("stroke-width", endpoints.start.r)
+        .style("stroke-opacity", line_opacity)
         .style("fill", "none");
 }
 
 function connect(svg, data) {
-
-    // Calculate the number of points
-    let points = new Map();
-    data.lines.forEach(function(line) {
-        let from = points.get(line.from.name);
-        if (!from) from = { top: 0, bottom: 0, left: 0, right: 0 };
-        from[line.from.side] += 1;
-        points.set(line.from.name, from);
-
-        let to = points.get(line.to.name);
-        if (!to) to = { top: 0, bottom: 0, left: 0, right: 0 };
-        to[line.to.side] += 1;
-        points.set(line.to.name, to);
-    });
-
-    // Actually find the location of the points
-    points.forEach(function(value, key, map) {
-        let actual_points = {
-            top: (value.top > 0 ? get_points(key, "top", value.top) : []),
-            bottom: (value.bottom > 0 ? get_points(key, "bottom", value.bottom) : []),
-            left: (value.left > 0 ? get_points(key, "left", value.left) : []),
-            right: (value.right > 0 ? get_points(key, "right", value.right) : [])
-        };
-        map.set(key, actual_points);
-    });    
-    console.log("points", points);
-
-    // Then collect endpoints based on common from edges
-    let edges = new Map();
-    data.lines.forEach(function(line) {
-        let key1 = line.from.name + "-" + line.from.side;
-        let value1 = edges.get(key1);
-        if (!value1) value1 = { list: [], side: line.from.side };
-        value1.list.push(line.to.name);
-        edges.set(key1, value1);
-
-        let key2 = line.to.name + "-" + line.to.side;
-        let value2 = edges.get(key2);
-        if (!value2) value2 = { list: [], side: line.to.side };
-        value2.list.push(line.from.name);
-        edges.set(key2, value2);
-    });
-
-    // And sort them by how they should get assigned a point
-    edges.forEach(function(value, key, map) {
-        if (value.list.length == 1)
-            return;
-        
-        let centers = value.list.map(function(name) {
-            let obj = d3.select("#" + name),
-                corners = get_corners(obj);
-            return {
-                name: name,
-                x: corners.top_left.x,
-                y: corners.top_left.y
-            };
-        });
-
-        switch (value.side) {
-        case "top":
-        case "bottom":
-            centers.sort(function(a, b) {
-                if (a.x < b.x) return -1;
-                if (a.x > b.x) return 1;
-                return 0;
-            });
-            value.list = centers.map(function(d) {
-                return d.name;
-            });
-            break;
-            
-        case "left":
-        case "right":
-            centers.sort(function(a, b) {
-                if (a.y < b.y) return -1;
-                if (a.y > b.y) return 1;
-                return 0;
-            });
-            value.list = centers.map(function(d) {
-                return d.name;
-            });
-            break;
-            
-        default:
-            console.error("HELP!");
-        }
-
-        map.set(key, value);
-    });
-    console.log("edges", edges);
-
-    edges = data.fix_edges(edges);
-    console.log("fixed edges", edges);
-
-    function get_point(a, b, side) {
-        let order = 0,
-            edge_list = edges.get(a + "-" + side).list;
-
-        let found = false;
-        for (var i = 0; i < edge_list.length; i++) {
-            if (edge_list[i] === b) {
-                order = i;
-                found = true;
-                break;
-            }
-        }
-        if (!found)
-            console.error("OH NO!!", a + "->" + b, edge_list);
-
-        let the_points = points.get(a);
-        return the_points[side][order];
-    }
     
     // Then draw the lines
     data.lines.forEach(function(line) {
 
-        let from_point = get_point(line.from.name, line.to.name, line.from.side),
-            to_point = get_point(line.to.name, line.from.name, line.to.side),
-            id = line.from.name + "-" + line.to.name;
+        /**
+        let from_points = get_points(line.from.name, line.from.side, 1),
+            from_point = from_points[0];
 
+        let to_points = get_points(line.to.name, line.to.side, 1),
+            to_point = to_points[0];
+         **/
+
+        console.log(line.from, "->", line.to);
+
+        let from_point = get_midpoint(line.from),
+            to_point = get_midpoint(line.to);
+
+        let id = line.from + "-" + line.to;
+        
         switch (line.direction) {
         case "custom":
             line.custom(svg, id, {
@@ -1575,18 +1817,129 @@ function connect(svg, data) {
             parent.insertBefore(element.node(), middle);
         }
     });
+    
+    function euclidean(cx, cy, ex, ey) {
+        var dy = ey - cy;
+        var dx = ex - cx;
+        return Math.sqrt((dx*dx) + (dy*dy));
+    }
+    
+    function point_near_centroid(a, b, centroid) {
+        // No need, we can draw a straight line
+        if (a[0] == b[0] || a[1] == b[1]) {
+            console.log("straight line", a, b);
+            return null;
+        }
+        
+        var options = [
+            { x: a[0], y: b[1] }, // up or down (y changes)
+            { x: b[0], y: a[1] } // left or right (x changes)
+        ];
+        for (var i = 0; i < options.length; i++) {
+            options[i].dist = euclidean(centroid[0], centroid[1],
+                                        options[i].x, options[i].y);
+        }
+        options.sort(function(a, b) {
+            return a.dist - b.dist;
+        });
+        const closest = options[0];
+        return [closest.x, closest.y];
+    }
 
     // Find the convex hull containing each group of names
     data.show_groups.forEach(function(set) {
+
+        var shown_groups = d3.select("#shown-groups");
+        
+        if (set.experimental) {
+            const curve_linear = d3.line()        
+                      .curve(d3.curveLinearClosed)
+                      .x(function(d) { return d[0]; })
+                      .y(function(d) { return d[1]; });
+            
+            let points = set.points();
+            console.log(set.name, points);
+
+            // Add points between the exterior points so that
+            // steps are close to the centroid
+            let points_interpolated = [];
+
+            for (var i = 0; i < points.exterior_points.length-1; i++) {
+                let a = points.exterior_points[i],
+                    b = points.exterior_points[i+1];
+                
+                points_interpolated.push(a);
+                let inter = point_near_centroid(a, b, points.centroid);
+                if (inter)
+                    points_interpolated.push(inter);
+            }
+            console.log("interpolated", points_interpolated);
+
+            shown_groups.append("path")
+                .attr("d", curve_linear(points_interpolated))
+                .attr("id", set.name)
+                .attr("stroke-width", 12)
+                .attr("stroke", function(d) { return circle_color(set.className); })
+                .attr("fill", function(d) { return circle_color(set.className); });
+
+            /**
+            points.all_triangles.forEach(function(d) {
+                shown_groups.append("path")
+                    .attr("d", linear_closed(d))
+                    .attr("stroke_width", 1)
+                    .attr("stroke", "#7d7d7d")
+                    .attr("fill", "none");
+            });
+
+            points.exterior_triangles.forEach(function(d) {
+                shown_groups.append("path")
+                    .attr("d", linear_closed(d))
+                    .attr("stroke_width", 1)
+                    .attr("stroke", "none")
+                    .attr("fill", "rgba(255, 0, 0, 0)");
+            });
+            
+            points.all.forEach(function(d) {
+                shown_groups.append("circle")
+                    .attr("class", "point")
+                    .attr("r", 2)
+                    .attr("cx", d[0])
+                    .attr("cy", d[1])
+                    .attr("stroke", "none")
+                    .attr("fill", "#ff0000");
+            });
+            
+            points_interpolated.forEach(function(d) {
+                shown_groups.append("circle")
+                    .attr("class", "point")
+                    .attr("r", 2)
+                    .attr("cx", d[0])
+                    .attr("cy", d[1])
+                    .attr("stroke", "none")
+                    .attr("fill", "#00eeff");
+            });
+
+            shown_groups.append("circle")
+                .attr("class", "point")
+                .attr("r", 3)
+                .attr("cx", points.centroid[0])
+                .attr("cy", points.centroid[1])
+                .attr("stroke", "none")
+                .attr("fill", "#ff00e1");
+            **/
+            
+            return;
+        }
 
         const sharp_cornered_line = d3.line()        
                   .curve(d3.curveLinearClosed)
                   .x(function(d) { return d.x; })
                   .y(function(d) { return d.y; });
 
+        console.log(set, set.points());
+        
         // Show it
-        d3.select("#shown-groups")
-            .append("path")
+        shown_groups.append("path")
             .attr("d", sharp_cornered_line(set.points()))
             .attr("id", set.name)
             .attr("stroke-width", 12)

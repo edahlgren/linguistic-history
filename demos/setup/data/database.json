@@ -1,0 +1,24 @@
+{
+    "circles": [
+        {
+            "group": 1,
+            "scale": 2
+        },
+        {
+            "group": 2,
+            "scale": 10
+        },
+        {
+            "group": 1,
+            "scale": 8
+        },
+        {
+            "group": 1,
+            "scale": 5
+        },
+        {
+            "group": 2,
+            "scale": 4
+        }
+    ]
+}

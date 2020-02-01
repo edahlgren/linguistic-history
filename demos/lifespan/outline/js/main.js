@@ -451,7 +451,7 @@ d3.json("data/people.json").then(function(genealogy) {
             g.append("rect")
                 .style("stroke", "none")
                 .style("fill", function(d) { return d.color; })
-                .style("opacity", 0.2)
+                .style("opacity", 0)
                 .attr("width", function(d) {
                     return d.endX - d.startX;
                 })
@@ -478,7 +478,7 @@ d3.json("data/people.json").then(function(genealogy) {
                     return d.label;
                 });
         });
-        
+    
     // Place the people
     const people = svg.append("g")
               .attr("font-family", "serif")
@@ -515,27 +515,43 @@ d3.json("data/people.json").then(function(genealogy) {
                       .text(function(d) {
                           return d.last + " " + d.born;
                       });
-                  
-                  g.append("line")
+
+                  g.append("rect")
                       .attr("id", function(d) {
-                          return d.last.replace(/\s/g, "-") + "-lifespan";
+                          return d.last.replace(/\s/g, "-") + "-lifespan-top";
                       })
                       .attr("class", "lifespan-line")
                       .style("stroke", function(d) {
-                          let person = graph.names.get(d.last);
-                          return stroke_color(person.profession);
+                          return "#dedede";
                       })
-                      .style("stroke-width", 2)
+                      .style("stroke-width", 0.25)
                       .style("fill", "none")
-                      .attr("x1", 0)
-                      .attr("x2", function(d) {
+                      .attr("y", -2.25)
+                      .attr("width", function(d) {
                           let start = xScale(d.born),
                               end = (d.died > 0 ? xScale(d.died) : width - margin.right);
                           return end - start;
                       })
-                      .attr("y1", 0)
-                      .attr("y2", 0);
-
+                      .attr("height", 2);
+                  
+                  g.append("rect")
+                      .attr("id", function(d) {
+                          return d.last.replace(/\s/g, "-") + "-lifespan-bottom";
+                      })
+                      .attr("class", "lifespan-line")
+                      .style("stroke", function(d) {
+                          return "#dedede";
+                      })
+                      .style("stroke-width", 0.25)
+                      .style("fill", "none")
+                      .attr("y", -0.25)
+                      .attr("width", function(d) {
+                          let start = xScale(d.born),
+                              end = (d.died > 0 ? xScale(d.died) : width - margin.right);
+                          return end - start;
+                      })
+                      .attr("height", 2);
+                  
                   g.append("text")
                       .attr("x", function(d) {
                           let start = xScale(d.born),
@@ -586,8 +602,9 @@ d3.json("data/people.json").then(function(genealogy) {
               arc_radius = Math.abs(target_left.y - source_left.y) / 2;
 
         let from_person = graph.names.get(link.from);
-        const stroke = stroke_color(from_person.profession);
-        
+        //const stroke = stroke_color(from_person.profession);
+        const stroke = "#f0f0f0";
+
         var arc_y = 0;
         if (inGroup1)
             arc_y = source_left.y + arc_radius;
@@ -608,7 +625,7 @@ d3.json("data/people.json").then(function(genealogy) {
             .attr("id", "arc:" + link.from + "-" + link.to)
             .attr("stroke", stroke)
             .style("stroke-width", 1.5)
-            .style("stroke-opacity", 1)
+            .style("stroke-opacity", 0.75)
             .style("fill", "none");
 
         if (link.extra_space) {
@@ -620,7 +637,7 @@ d3.json("data/people.json").then(function(genealogy) {
                 .attr("id", "extra-line:" + link.from + "-" + link.to)
                 .attr("stroke", stroke)
                 .style("stroke-width", 1.5)
-                .style("stroke-opacity", 1)
+                .style("stroke-opacity", 0.75)
                 .style("fill", "none");
         }
         
@@ -632,7 +649,7 @@ d3.json("data/people.json").then(function(genealogy) {
             .attr("id", "line:" + link.from + "-" + link.to)
             .attr("stroke", stroke)
             .style("stroke-width", 1.5)
-            .style("stroke-opacity", 1)
+            .style("stroke-opacity", 0.75)
             .style("fill", "none");
     });
 });

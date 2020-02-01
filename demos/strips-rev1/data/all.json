@@ -1,0 +1,1268 @@
+{
+  "people": [
+    {
+      "first": "Moritz",
+      "last": "Lazarus",
+      "born": "1824",
+      "died": "1903",
+      "profession": "unknown",
+      "key": ""
+    },
+    {
+      "first": "Heymann",
+      "last": "Steinthal",
+      "born": "1823",
+      "died": "1899",
+      "profession": "anthropologist",
+      "key": ""
+    },
+    {
+      "first": "Franz",
+      "last": "Boas",
+      "born": "1859",
+      "died": "1942",
+      "profession": "anthropologist",
+      "key": ""
+    },
+    {
+      "first": "Ruth",
+      "last": "Benedict",
+      "born": "1887",
+      "died": "1948",
+      "profession": "anthropologist",
+      "key": ""
+    },
+    {
+      "first": "Margaret",
+      "last": "Mead",
+      "born": "1901",
+      "died": "1978",
+      "profession": "anthropologist",
+      "key": ""
+    },
+    {
+      "first": "Wilhelm von",
+      "last": "Humboldt",
+      "born": "1767",
+      "died": "1835",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Friedrich von",
+      "last": "Schlegel",
+      "born": "1772",
+      "died": "1829",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Jacob",
+      "last": "Grimm",
+      "born": "1785",
+      "died": "1863",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Rasmus",
+      "last": "Rask",
+      "born": "1787",
+      "died": "1832",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Franz",
+      "last": "Bopp",
+      "born": "1791",
+      "died": "1867",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Auguste ",
+      "last": "Leskien",
+      "born": "1840",
+      "died": "1916",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Berthold",
+      "last": "Delbruek",
+      "born": "1842",
+      "died": "1922",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Hugo",
+      "last": "Schuchardt",
+      "born": "1842",
+      "died": "1927",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Jan ",
+      "last": "Baudouin de Courtenay",
+      "born": "1845",
+      "died": "1929",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Hermann",
+      "last": "Paul",
+      "born": "1846",
+      "died": "1921",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Hermann",
+      "last": "Osthoff",
+      "born": "1847",
+      "died": "1909",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "F.F.",
+      "last": "Fortunatov",
+      "born": "1848",
+      "died": "1914",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Karl",
+      "last": "Brugmann",
+      "born": "1849",
+      "died": "1919",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Charles R.",
+      "last": "Lanman",
+      "born": "1850",
+      "died": "1941",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Eduard",
+      "last": "Sievers",
+      "born": "1850",
+      "died": "1932",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Mikolay",
+      "last": "Kruszewski",
+      "born": "1851",
+      "died": "1887",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Maurice",
+      "last": "Bloomfield",
+      "born": "1855",
+      "died": "1928",
+      "profession": "linguist",
+      "key": "MauriceBloomfield"
+    },
+    {
+      "first": "William Rainey",
+      "last": "Harper",
+      "born": "1856",
+      "died": "1906",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Ferdinand de",
+      "last": "Saussure",
+      "born": "1857",
+      "died": "1913",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Paul ",
+      "last": "Passy",
+      "born": "1859",
+      "died": "1913",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Carl",
+      "last": "Buck",
+      "born": "1866",
+      "died": "1955",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Antoine",
+      "last": "Meillet",
+      "born": "1866",
+      "died": "1936",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Vilem",
+      "last": "Mathesius",
+      "born": "1882",
+      "died": "1945",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Serge",
+      "last": "Karchevsky",
+      "born": "1884",
+      "died": "1955",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Edward",
+      "last": "Sapir",
+      "born": "1884",
+      "died": "1939",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Leonard",
+      "last": "Bloomfield",
+      "born": "1887",
+      "died": "1949",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Nikolai",
+      "last": "Trubetzkoy",
+      "born": "1890",
+      "died": "1938",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "E.D.",
+      "last": "Polivanov",
+      "born": "1891",
+      "died": "1938",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Roman",
+      "last": "Jakobson",
+      "born": "1896",
+      "died": "1982",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Rene",
+      "last": "Wellek",
+      "born": "1903",
+      "died": "1995",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Harry",
+      "last": "Hoijer",
+      "born": "1904",
+      "died": "1976",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Stanley",
+      "last": "Newman",
+      "born": "1905",
+      "died": "1984",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Kenneth",
+      "last": "Pike",
+      "born": "1905",
+      "died": "1984",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Zellig S.",
+      "last": "Harris",
+      "born": "1906",
+      "died": "1986",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Carl",
+      "last": "Voegelin",
+      "born": "1906",
+      "died": "1986",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Andre",
+      "last": "Martinet",
+      "born": "1908",
+      "died": "1999",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Morris ",
+      "last": "Swadesh",
+      "born": "1909",
+      "died": "1967",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Mary",
+      "last": "Haas",
+      "born": "1910",
+      "died": "1996",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Charles R.",
+      "last": "Hockett",
+      "born": "1916",
+      "died": "2000",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Winfred",
+      "last": "Lehmann",
+      "born": "1916",
+      "died": "2007",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Paul ",
+      "last": "Garvin",
+      "born": "1919",
+      "died": "1994",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Morris",
+      "last": "Halle",
+      "born": "1923",
+      "died": "2018",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Noam",
+      "last": "Chomsky",
+      "born": "1928",
+      "died": "",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Sydney",
+      "last": "Lamb",
+      "born": "1929",
+      "died": "",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Anthony",
+      "last": "Oettinger",
+      "born": "1929",
+      "died": "1994",
+      "profession": "linguist",
+      "key": ""
+    },
+    {
+      "first": "Kasimir",
+      "last": "Twardowski",
+      "born": "1866",
+      "died": "1938",
+      "profession": "logician",
+      "key": ""
+    },
+    {
+      "first": "Jan ",
+      "last": "Lukasiewicz",
+      "born": "1878",
+      "died": "1956",
+      "profession": "logician",
+      "key": ""
+    },
+    {
+      "first": "Stanislaw ",
+      "last": "Le\\'sniewski",
+      "born": "1886",
+      "died": "1939",
+      "profession": "logician",
+      "key": "Lesniewski"
+    },
+    {
+      "first": "Georg",
+      "last": "Cantor",
+      "born": "1845",
+      "died": "1918",
+      "profession": "mathematician",
+      "key": ""
+    },
+    {
+      "first": "David",
+      "last": "Hilbert",
+      "born": "1862",
+      "died": "1943",
+      "profession": "mathematician",
+      "key": ""
+    },
+    {
+      "first": "Johann Gottfried",
+      "last": "Herder",
+      "born": "1744",
+      "died": "1803",
+      "profession": "other",
+      "key": ""
+    },
+    {
+      "first": "Tomas",
+      "last": "Masaryk",
+      "born": "1850",
+      "died": "1937",
+      "profession": "other",
+      "key": ""
+    },
+    {
+      "first": "Lev",
+      "last": "Shcherba",
+      "born": "1850",
+      "died": "1944",
+      "profession": "other",
+      "key": ""
+    },
+    {
+      "first": "John",
+      "last": "Dewey",
+      "born": "1859",
+      "died": "1952",
+      "profession": "Phil-psych",
+      "key": ""
+    },
+    {
+      "first": "Immanuel",
+      "last": "Kant",
+      "born": "1724",
+      "died": "1804",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Johann Gottleib",
+      "last": "Fichte",
+      "born": "1762",
+      "died": "1814",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Friedrich",
+      "last": "Hegel",
+      "born": "1776",
+      "died": "1841",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Auguste ",
+      "last": "Comte",
+      "born": "1798",
+      "died": "1857",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Friedrich",
+      "last": "Trendelenberg",
+      "born": "1802",
+      "died": "1872",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "John Stuart",
+      "last": "Mill ",
+      "born": "1806",
+      "died": "1873",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Charles Sanders ",
+      "last": "Peirce",
+      "born": "1839",
+      "died": "1914",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Anton",
+      "last": "Marty",
+      "born": "1847",
+      "died": "1914",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Alexis",
+      "last": "Meinong",
+      "born": "1853",
+      "died": "1920",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Christian von",
+      "last": "Ehrenfels",
+      "born": "1859",
+      "died": "1932",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Edmund",
+      "last": "Husserl",
+      "born": "1859",
+      "died": "1938",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Bertrand",
+      "last": "Russell",
+      "born": "1872",
+      "died": "1970",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Ernst",
+      "last": "Cassirer",
+      "born": "1874",
+      "died": "1945",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Otto",
+      "last": "Neurath",
+      "born": "1882",
+      "died": "1945",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Moritz",
+      "last": "Schlick",
+      "born": "1882",
+      "died": "1936",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Ludwig",
+      "last": "Wittgenstein",
+      "born": "1889",
+      "died": "1953",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Rudolf",
+      "last": "Carnap",
+      "born": "1891",
+      "died": "1970",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Hans",
+      "last": "Reichenbach",
+      "born": "1891",
+      "died": "1953",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Alelxander",
+      "last": "Koyre",
+      "born": "1892",
+      "died": "1964",
+      "profession": "philosopher",
+      "key": ""
+    },
+    {
+      "first": "Franz",
+      "last": "Brentano",
+      "born": "1838",
+      "died": "1917",
+      "profession": "philpsych",
+      "key": ""
+    },
+    {
+      "first": "Gustav",
+      "last": "Fechner",
+      "born": "1801",
+      "died": "1887",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Hermann",
+      "last": "Lotze",
+      "born": "1817",
+      "died": "1881",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Wilhelm  ",
+      "last": "Wundt",
+      "born": "1832",
+      "died": "1910",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Theodule",
+      "last": "Ribot",
+      "born": "1839",
+      "died": "1916",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Wililam",
+      "last": "James",
+      "born": "1842",
+      "died": "1949",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Carl",
+      "last": "Stumpf",
+      "born": "1848",
+      "died": "1936",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Sigmund",
+      "last": "Freud",
+      "born": "1856",
+      "died": "1939",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Jacques",
+      "last": "Loeb",
+      "born": "1859",
+      "died": "1924",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Oswald",
+      "last": "Kulpe",
+      "born": "1862",
+      "died": "1915",
+      "profession": "psychologist",
+      "key": "Kulpe"
+    },
+    {
+      "first": "Edward",
+      "last": "Titchener",
+      "born": "1867",
+      "died": "1927",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "James ",
+      "last": "Angell",
+      "born": "1869",
+      "died": "1949",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Max ",
+      "last": "Meyer",
+      "born": "1873",
+      "died": "1967",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "John B.",
+      "last": "Watson",
+      "born": "1878",
+      "died": "1958",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Herbert S.",
+      "last": "Langfeld",
+      "born": "1879",
+      "died": "1958",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Max",
+      "last": "Wertheimer",
+      "born": "1880",
+      "died": "1943",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Clark",
+      "last": "Hull",
+      "born": "1884",
+      "died": "1952",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Kurt",
+      "last": "Koffka",
+      "born": "1886",
+      "died": "1941",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Edward",
+      "last": "Tolman",
+      "born": "1886",
+      "died": "1959",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Karl",
+      "last": "Lashley",
+      "born": "1890",
+      "died": "1958",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Kurt",
+      "last": "Lewin",
+      "born": "1890",
+      "died": "1947",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Fritz",
+      "last": "Heider",
+      "born": "1896",
+      "died": "1988",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Gordon",
+      "last": "Allport",
+      "born": "1897",
+      "died": "1967",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "B.F.",
+      "last": "Skinner",
+      "born": "1904",
+      "died": "1990",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Jerome",
+      "last": "Bruner",
+      "born": "1915",
+      "died": "2018",
+      "profession": "psychologist",
+      "key": ""
+    },
+    {
+      "first": "Georgi",
+      "last": "Chelpanov",
+      "born": "1862",
+      "died": "1936",
+      "profession": "uncertain",
+      "key": ""
+    },
+    {
+      "first": "Gustav",
+      "last": "Shpet",
+      "born": "1879",
+      "died": "1937",
+      "profession": "uncertain",
+      "key": ""
+    },
+    {
+      "first": "Erwin",
+      "last": "Reifler",
+      "born": "1903",
+      "died": "1965",
+      "profession": "uncertain",
+      "key": ""
+    },
+    {
+      "first": "Victor",
+      "last": "Yngve",
+      "born": "1920",
+      "died": "2012",
+      "profession": "uncertain",
+      "key": ""
+    },
+    {
+      "first": "Rudolph von",
+      "last": "Roth",
+      "born": "1821",
+      "died": "1895",
+      "profession": "unknown",
+      "key": ""
+    },
+    {
+      "first": "Albrecht",
+      "last": "Weber",
+      "born": "1825",
+      "died": "1932",
+      "profession": "unknown",
+      "key": ""
+    }
+  ],
+  "links": [
+    {
+      "from": "Herder",
+      "to": "Fichte",
+      "type": "teacher"
+    },
+    {
+      "from": "Kant",
+      "to": "Fichte",
+      "type": "teacher"
+    },
+    {
+      "from": "Langfeld",
+      "to": "Allport",
+      "type": "teacher"
+    },
+    {
+      "from": "Cassirer",
+      "to": "Lewin",
+      "type": "teacher"
+    },
+    {
+      "from": "Bopp",
+      "to": "Whitney",
+      "type": "teacher"
+    },
+    {
+      "from": "Curtius",
+      "to": "Whitney",
+      "type": "teacher"
+    },
+    {
+      "from": "Lepsius",
+      "to": "Whitney",
+      "type": "teacher"
+    },
+    {
+      "from": "Mueller",
+      "to": "Whitney",
+      "type": "teacher"
+    },
+    {
+      "from": "Whitney",
+      "to": "Harper",
+      "type": "teacher"
+    },
+    {
+      "from": "Whitney",
+      "to": "MauriceBloomfield",
+      "type": "teacher"
+    },
+    {
+      "from": "Whitney",
+      "to": "Lanman",
+      "type": "teacher"
+    },
+    {
+      "from": "Whitney",
+      "to": "Buck",
+      "type": "teacher"
+    },
+    {
+      "from": "Buck",
+      "to": "Bloomfield",
+      "type": "teacher"
+    },
+    {
+      "from": "Boas",
+      "to": "Sapir",
+      "type": "teacher"
+    },
+    {
+      "from": "Boas",
+      "to": "Benedict",
+      "type": "teacher"
+    },
+    {
+      "from": "Boas",
+      "to": "Mead",
+      "type": "teacher"
+    },
+    {
+      "from": "Benedict",
+      "to": "Mead",
+      "type": "teacher"
+    },
+    {
+      "from": "Sapir",
+      "to": "Swadesh",
+      "type": "teacher"
+    },
+    {
+      "from": "Sapir",
+      "to": "Newman",
+      "type": "teacher"
+    },
+    {
+      "from": "Sapir",
+      "to": "Haas",
+      "type": "teacher"
+    },
+    {
+      "from": "Sapir",
+      "to": "Hockett",
+      "type": "teacher"
+    },
+    {
+      "from": "Sapir",
+      "to": "Voegelin",
+      "type": "postDoc"
+    },
+    {
+      "from": "Sapir",
+      "to": "Harris",
+      "type": "teacher"
+    },
+    {
+      "from": "Sapir",
+      "to": "Pike",
+      "type": "teacher"
+    },
+    {
+      "from": "Sapir",
+      "to": "Hoijer",
+      "type": "influence"
+    },
+    {
+      "from": "Bloomfield",
+      "to": "Harris",
+      "type": "teacher"
+    },
+    {
+      "from": "Bloomfield",
+      "to": "Hockett",
+      "type": "teacher"
+    },
+    {
+      "from": "Bloomfield",
+      "to": "Pike",
+      "type": "teacher"
+    },
+    {
+      "from": "Sapir",
+      "to": "Koffka",
+      "type": "teacher"
+    },
+    {
+      "from": "Harris",
+      "to": "Chomsky",
+      "type": "hostile"
+    },
+    {
+      "from": "Chomsky",
+      "to": "Halle",
+      "type": "teacher"
+    },
+    {
+      "from": "Jakobson",
+      "to": "Halle",
+      "type": "teacher"
+    },
+    {
+      "from": "Osthoff",
+      "to": "Saussure",
+      "type": "teacher"
+    },
+    {
+      "from": "Russell",
+      "to": "Wittgenstein",
+      "type": "teacher"
+    },
+    {
+      "from": "Comte",
+      "to": "Brentano",
+      "type": "influence"
+    },
+    {
+      "from": "Brentano",
+      "to": "Marty",
+      "type": "teacher"
+    },
+    {
+      "from": "Brentano",
+      "to": "Masaryk",
+      "type": "teacher"
+    },
+    {
+      "from": "Brentano",
+      "to": "Husserl",
+      "type": "teacher"
+    },
+    {
+      "from": "Brentano",
+      "to": "Meinong",
+      "type": "teacher"
+    },
+    {
+      "from": "Brentano",
+      "to": "Ehrenfels",
+      "type": "teacher"
+    },
+    {
+      "from": "Brentano",
+      "to": "Stumpf",
+      "type": "teacher"
+    },
+    {
+      "from": "Brentano",
+      "to": "Freud",
+      "type": "teacher"
+    },
+    {
+      "from": "Brentano",
+      "to": "Twardowski",
+      "type": "teacher"
+    },
+    {
+      "from": "Wertheimer",
+      "to": "Heider",
+      "type": "teacher"
+    },
+    {
+      "from": "Stumpf",
+      "to": "Allport",
+      "type": "postDoc"
+    },
+    {
+      "from": "Stumpf",
+      "to": "Langfeld",
+      "type": "teacher"
+    },
+    {
+      "from": "Stumpf",
+      "to": "Wertheimer",
+      "type": "teacher"
+    },
+    {
+      "from": "Stumpf",
+      "to": "Kulpe",
+      "type": "teacher"
+    },
+    {
+      "from": "Kulpe",
+      "to": "Wertheimer",
+      "type": "teacher"
+    },
+    {
+      "from": "Kulpe",
+      "to": "Koffka",
+      "type": "teacher"
+    },
+    {
+      "from": "Masaryk",
+      "to": "Mathesius",
+      "type": "teacher"
+    },
+    {
+      "from": "Marty",
+      "to": "Mathesius",
+      "type": "teacher"
+    },
+    {
+      "from": "Wundt",
+      "to": "Kulpe",
+      "type": "teacher"
+    },
+    {
+      "from": "Wundt",
+      "to": "Titchener",
+      "type": "teacher"
+    },
+    {
+      "from": "Wundt",
+      "to": "Angell",
+      "type": "teacher"
+    },
+    {
+      "from": "Wundt",
+      "to": "Chelpanov",
+      "type": "teacher"
+    },
+    {
+      "from": "Chelpanov",
+      "to": "Shpet",
+      "type": "teacher"
+    },
+    {
+      "from": "Shpet",
+      "to": "Jakobson",
+      "type": "teacher"
+    },
+    {
+      "from": "Loeb",
+      "to": "Watson",
+      "type": "teacher"
+    },
+    {
+      "from": "Angell",
+      "to": "Watson",
+      "type": "teacher"
+    },
+    {
+      "from": "Titchener",
+      "to": "Watson",
+      "type": "teacher"
+    },
+    {
+      "from": "Watson",
+      "to": "Tolman",
+      "type": "teacher"
+    },
+    {
+      "from": "Watson",
+      "to": "Lashley",
+      "type": "teacher"
+    },
+    {
+      "from": "Watson",
+      "to": "Skinner",
+      "type": "teacher"
+    },
+    {
+      "from": "Watson",
+      "to": "Hull",
+      "type": "teacher"
+    },
+    {
+      "from": "Fortunatov",
+      "to": "Trubetzkoy",
+      "type": "teacher"
+    },
+    {
+      "from": "Weber",
+      "to": "Breal",
+      "type": "teacher"
+    },
+    {
+      "from": "Breal",
+      "to": "Fortunatov",
+      "type": "teacher"
+    },
+    {
+      "from": "Voegelin",
+      "to": "Garvin",
+      "type": "teacher"
+    },
+    {
+      "from": "Steinthal",
+      "to": "Wundt",
+      "type": "teacher"
+    },
+    {
+      "from": "Humboldt",
+      "to": "Steinthal",
+      "type": "influence"
+    },
+    {
+      "from": "Steinthal",
+      "to": "Boas",
+      "type": "influence"
+    },
+    {
+      "from": "Herder",
+      "to": "Humboldt",
+      "type": "influence"
+    },
+    {
+      "from": "Kant",
+      "to": "Herder",
+      "type": "teacher"
+    },
+    {
+      "from": "Wertheimer",
+      "to": "Allport",
+      "type": "postDoc"
+    },
+    {
+      "from": "Hilbert",
+      "to": "Husserl",
+      "type": "teacher"
+    },
+    {
+      "from": "Allport",
+      "to": "Bruner",
+      "type": "teacher"
+    },
+    {
+      "from": "Trendelenberg",
+      "to": "Brentano",
+      "type": "teacher"
+    }
+  ]
+}
